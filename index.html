@@ -1,285 +1,74 @@
-
-
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-  {
-  "symbols": [
-    {
-      "proName": "FOREXCOM:SPXUSD",
-      "title": "S&P 500 Index"
-    },
-    {
-      "proName": "BITSTAMP:BTCUSD",
-      "title": "Bitcoin"
-    },
-    {
-      "proName": "BITSTAMP:ETHUSD",
-      "title": "Ethereum"
-    },
-    {
-      "description": "USDINR",
-      "proName": "FX_IDC:USDINR"
-    },
-    {
-      "description": "sensex",
-      "proName": "BSE:SENSEX"
-    },
-    {
-      "description": "DOWJONES",
-      "proName": "BLACKBULL:US30"
-    }
-  ],
-  "showSymbolLogo": true,
-  "isTransparent": false,
-  "displayMode": "adaptive",
-  "colorTheme": "dark",
-  "locale": "en"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
-  {
-  "interval": "1m",
-  "width": "100%",
-  "isTransparent": false,
-  "height": 450,
-  "symbol": "NSE:NIFTY",
-  "showIntervalTabs": true,
-  "displayMode": "single",
-  "locale": "en",
-  "colorTheme": "dark"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-
-
-
-
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>
-  {
-  "exchanges": [],
-  "dataSource": "SENSEX",
-  "grouping": "sector",
-  "blockSize": "market_cap_basic",
-  "blockColor": "change",
-  "locale": "en",
-  "symbolUrl": "",
-  "colorTheme": "dark",
-  "hasTopBar": false,
-  "isDataSetEnabled": false,
-  "isZoomEnabled": true,
-  "hasSymbolTooltip": true,
-  "isMonoSize": false,
-  "width": "100%",
-  "height": "100%"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
-  {
-  "width": "100%",
-  "height": "100%",
-  "symbolsGroups": [
-    {
-      "name": "Indices",
-      "originalName": "Indices",
-      "symbols": [
-        {
-          "name": "FOREXCOM:SPXUSD",
-          "displayName": "S&P 500 Index"
-        },
-        {
-          "name": "FOREXCOM:NSXUSD",
-          "displayName": "US 100 Cash CFD"
-        },
-        {
-          "name": "FOREXCOM:DJI",
-          "displayName": "Dow Jones Industrial Average Index"
-        },
-        {
-          "name": "INDEX:NKY",
-          "displayName": "Japan 225"
-        },
-        {
-          "name": "INDEX:DEU40",
-          "displayName": "DAX Index"
-        },
-        {
-          "name": "FOREXCOM:UKXGBP",
-          "displayName": "FTSE 100 Index"
-        }
-      ]
-    },
-    {
-      "name": "Futures",
-      "originalName": "Futures",
-      "symbols": [
-        {
-          "name": "CME_MINI:ES1!",
-          "displayName": "S&P 500"
-        },
-        {
-          "name": "CME:6E1!",
-          "displayName": "Euro"
-        },
-        {
-          "name": "COMEX:GC1!",
-          "displayName": "Gold"
-        },
-        {
-          "name": "NYMEX:CL1!",
-          "displayName": "WTI Crude Oil"
-        },
-        {
-          "name": "NYMEX:NG1!",
-          "displayName": "Gas"
-        },
-        {
-          "name": "CBOT:ZC1!",
-          "displayName": "Corn"
-        }
-      ]
-    },
-    {
-      "name": "Bonds",
-      "originalName": "Bonds",
-      "symbols": [
-        {
-          "name": "CBOT:ZB1!",
-          "displayName": "T-Bond"
-        },
-        {
-          "name": "CBOT:UB1!",
-          "displayName": "Ultra T-Bond"
-        },
-        {
-          "name": "EUREX:FGBL1!",
-          "displayName": "Euro Bund"
-        },
-        {
-          "name": "EUREX:FBTP1!",
-          "displayName": "Euro BTP"
-        },
-        {
-          "name": "EUREX:FGBM1!",
-          "displayName": "Euro BOBL"
-        }
-      ]
-    },
-    {
-      "name": "Forex",
-      "originalName": "Forex",
-      "symbols": [
-        {
-          "name": "FX:EURUSD",
-          "displayName": "EUR to USD"
-        },
-        {
-          "name": "FX:GBPUSD",
-          "displayName": "GBP to USD"
-        },
-        {
-          "name": "FX:USDJPY",
-          "displayName": "USD to JPY"
-        },
-        {
-          "name": "FX:USDCHF",
-          "displayName": "USD to CHF"
-        },
-        {
-          "name": "FX:AUDUSD",
-          "displayName": "AUD to USD"
-        },
-        {
-          "name": "FX:USDCAD",
-          "displayName": "USD to CAD"
-        }
-      ]
-    }
-  ],
-  "showSymbolLogo": true,
-  "isTransparent": false,
-  "colorTheme": "dark",
-  "locale": "en",
-  "backgroundColor": "#131722"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
-  {
-  "width": "100%",
-  "height": "100%",
-  "currencies": [
-    "EUR",
-    "INR",
-    "USD",
-    "JPY",
-    "GBP",
-    "CHF",
-    "AUD",
-    "CAD",
-    "NZD"
-  ],
-  "isTransparent": false,
-  "colorTheme": "dark",
-  "locale": "en",
-  "backgroundColor": "#000000"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-heat-map.js" async>
-  {
-  "width": "100%",
-  "height": "100%",
-  "currencies": [
-    "EUR",
-    "INR",
-    "USD",
-    "JPY",
-    "GBP",
-    "CHF",
-    "AUD",
-    "CAD",
-    "NZD",
-    "CNY"
-  ],
-  "isTransparent": false,
-  "colorTheme": "dark",
-  "locale": "en",
-  "backgroundColor": "#1D222D"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yield Curve Capital - AI-powered equity research and portfolio management for Indian capital markets.">
+    <title>Yield Curve Capital</title>
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Yield Curve Capital Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1><span class="highlight">Yield Curve Capital</span></h1>
+            <p>Empowering Investments with <span class="highlight">AI</span>, <span class="highlight">Machine Learning</span>, and <span class="highlight">Blockchain</span>.</p>
+            <a href="#features" class="cta-btn">Explore More</a>
+        </div>
+        <div class="hero-animation">
+            <img src="assets/images/hero-animation.gif" alt="Tech Animation">
+        </div>
+    </header>
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Yield Curve Capital, we harness advanced <span class="highlight">AI-driven analytics</span> to decode complex market trends and optimize investment portfolios. Our solutions seamlessly integrate <span class="highlight">machine learning</span> and <span class="highlight">blockchain</span> to ensure cutting-edge, transparent, and efficient financial management.</p>
+        </div>
+    </section>
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2>Our Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>AI Insights</h3>
+                    <p>Leverage deep-learning models to analyze and predict market trends for smarter investment decisions.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Dynamic Portfolios</h3>
+                    <p>Real-time rebalancing based on market data, maximizing opportunities and minimizing risks.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Blockchain Transparency</h3>
+                    <p>Utilizing blockchain technology to ensure secure, transparent, and trustworthy financial operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="video" class="video-section">
+        <div class="container">
+            <h2>Discover More</h2>
+            <video controls autoplay muted loop class="intro-video">
+                <source src="assets/videos/intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Yield Curve Capital. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
