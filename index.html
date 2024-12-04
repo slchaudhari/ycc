@@ -10,8 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header with TradingView Floating Widget -->
     <header class="hero">
-        <nav class="navbar">
+        <div class="navbar">
             <div class="logo">
                 <img src="assets/images/logo.png" alt="Yield Curve Capital Logo">
             </div>
@@ -20,50 +21,158 @@
                 <li><a href="#features">Features</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
+        </div>
+        
+        <!-- TradingView Ticker Tape Floating Widget -->
+        <div class="floating-widget">
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright">
+                    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                        <span class="blue-text">Track all markets on TradingView</span>
+                    </a>
+                </div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                {
+                    "symbols": [
+                        { "proName": "FOREXCOM:SPXUSD", "title": "S&P 500 Index" },
+                        { "proName": "FOREXCOM:NSXUSD", "title": "US 100 Cash CFD" },
+                        { "proName": "FX_IDC:EURUSD", "title": "EUR to USD" },
+                        { "proName": "BITSTAMP:BTCUSD", "title": "Bitcoin" },
+                        { "proName": "BITSTAMP:ETHUSD", "title": "Ethereum" }
+                    ],
+                    "showSymbolLogo": true,
+                    "isTransparent": false,
+                    "displayMode": "adaptive",
+                    "colorTheme": "dark",
+                    "locale": "en"
+                }
+                </script>
+            </div>
+        </div>
+
         <div class="hero-content">
             <h1><span class="highlight">Yield Curve Capital</span></h1>
             <p>Empowering Investments with <span class="highlight">AI</span> and <span class="highlight">Machine Learning</span>.</p>
             <a href="#features" class="cta-btn">Explore More</a>
         </div>
-        <div class="hero-animation">
-            <img src="assets/images/hero-animation.gif" alt="Tech Animation">
-        </div>
     </header>
+
+    <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
             <h2>About Us</h2>
             <p>At Yield Curve Capital, we harness advanced <span class="highlight">AI-driven analytics</span> to decode complex market trends and optimize investment portfolios. Our solutions seamlessly integrate <span class="highlight">machine learning</span> to ensure cutting-edge, efficient financial management.</p>
         </div>
     </section>
+
+    <!-- TradingView Widgets Section -->
     <section id="market-tracker" class="market-tracker-section">
-        <div class="tradingview-widget-container full-screen-widget">
+        <!-- First TradingView Widget: Advanced Chart -->
+        <div class="tradingview-widget-container" style="height:100%;width:100%">
+            <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+            <div class="tradingview-widget-copyright">
+                <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                    <span class="blue-text">Track all markets on TradingView</span>
+                </a>
+            </div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+            {
+                "autosize": true,
+                "symbol": "USDINR",
+                "interval": "D",
+                "timezone": "Etc/UTC",
+                "theme": "dark",
+                "style": "1",
+                "locale": "en",
+                "allow_symbol_change": true,
+                "calendar": false,
+                "support_host": "https://www.tradingview.com"
+            }
+            </script>
+        </div>
+
+        <!-- Second TradingView Widget: Stock Heatmap -->
+        <div class="tradingview-widget-container">
             <div class="tradingview-widget-container__widget"></div>
             <div class="tradingview-widget-copyright">
                 <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
                     <span class="blue-text">Track all markets on TradingView</span>
                 </a>
             </div>
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>
             {
-            "symbol": "FX_IDC:USDINR",
-            "width": "100%",
-            "height": "100%",
-            "locale": "en",
-            "dateRange": "12M",
-            "colorTheme": "dark",
-            "isTransparent": false,
-            "autosize": true,
-            "largeChartUrl": ""
+                "exchanges": [],
+                "dataSource": "SENSEX",
+                "grouping": "sector",
+                "blockSize": "market_cap_basic",
+                "blockColor": "change",
+                "locale": "en",
+                "symbolUrl": "",
+                "colorTheme": "dark",
+                "hasTopBar": false,
+                "isDataSetEnabled": false,
+                "isZoomEnabled": true,
+                "hasSymbolTooltip": true,
+                "isMonoSize": false,
+                "width": "100%",
+                "height": "100%"
+            }
+            </script>
+        </div>
+
+        <!-- Third TradingView Widget: Forex Cross Rates -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright">
+                <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                    <span class="blue-text">Track all markets on TradingView</span>
+                </a>
+            </div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
+            {
+                "width": 550,
+                "height": 400,
+                "currencies": ["EUR", "USD", "JPY", "GBP", "AUD", "INR"],
+                "isTransparent": false,
+                "colorTheme": "dark",
+                "locale": "en",
+                "backgroundColor": "#000000"
+            }
+            </script>
+        </div>
+
+        <!-- Fourth TradingView Widget: Another Advanced Chart -->
+        <div class="tradingview-widget-container" style="height:100%;width:100%">
+            <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+            <div class="tradingview-widget-copyright">
+                <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                    <span class="blue-text">Track all markets on TradingView</span>
+                </a>
+            </div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+            {
+                "autosize": true,
+                "symbol": "USDINR",
+                "interval": "D",
+                "timezone": "Etc/UTC",
+                "theme": "dark",
+                "style": "1",
+                "locale": "en",
+                "allow_symbol_change": true,
+                "calendar": false,
+                "support_host": "https://www.tradingview.com"
             }
             </script>
         </div>
     </section>
+
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 Yield Curve Capital. All Rights Reserved.</p>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
