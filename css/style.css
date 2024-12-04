@@ -1,5 +1,10 @@
 /* General Styles */
 body {
+    background: url('assets/images/background.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #101010;
