@@ -23,7 +23,7 @@
         </nav>
         <div class="hero-content">
             <h1><span class="highlight">Yield Curve Capital</span></h1>
-            <p>Empowering Investments with <span class="highlight">AI</span>, <span class="highlight">Machine Learning</span>, and <span class="highlight">Blockchain</span>.</p>
+            <p>Empowering Investments with <span class="highlight">AI</span> and <span class="highlight">Machine Learning</span>.</p>
             <a href="#features" class="cta-btn">Explore More</a>
         </div>
         <div class="hero-animation">
@@ -33,7 +33,7 @@
     <section id="about" class="about-section">
         <div class="container">
             <h2>About Us</h2>
-            <p>At Yield Curve Capital, we harness advanced <span class="highlight">AI-driven analytics</span> to decode complex market trends and optimize investment portfolios. Our solutions seamlessly integrate <span class="highlight">machine learning</span> and <span class="highlight">blockchain</span> to ensure cutting-edge, transparent, and efficient financial management.</p>
+            <p>At Yield Curve Capital, we harness advanced <span class="highlight">AI-driven analytics</span> to decode complex market trends and optimize investment portfolios. Our solutions seamlessly integrate <span class="highlight">machine learning</span> to ensure cutting-edge, efficient financial management.</p>
         </div>
     </section>
     <section id="features" class="features-section">
@@ -49,19 +49,38 @@
                     <p>Real-time rebalancing based on market data, maximizing opportunities and minimizing risks.</p>
                 </div>
                 <div class="feature-item">
-                    <h3>Blockchain Transparency</h3>
-                    <p>Utilizing blockchain technology to ensure secure, transparent, and trustworthy financial operations.</p>
+                    <h3>Market Tracking</h3>
+                    <p>Stay ahead with comprehensive tools and insights to monitor all markets effectively.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="video" class="video-section">
+    <section id="market-tracker" class="market-tracker-section">
         <div class="container">
-            <h2>Discover More</h2>
-            <video controls autoplay muted loop class="intro-video">
-                <source src="https://www.youtube.com/watch?v=z_HtJ_3y4_Y">
-                Your browser does not support the video tag.
-            </video>
+            <h2>Market Tracker</h2>
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright">
+                    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                        <span class="blue-text">Track all markets on TradingView</span>
+                    </a>
+                </div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                {
+                "symbol": "FX_IDC:USDINR",
+                "width": "350",
+                "height": "220",
+                "locale": "en",
+                "dateRange": "12M",
+                "colorTheme": "dark",
+                "isTransparent": false,
+                "autosize": false,
+                "largeChartUrl": ""
+                }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
         </div>
     </section>
     <footer class="footer">
