@@ -1,0 +1,1602 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="AI-generated website">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="index, follow">
+      
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  50: '#f0f9ff',
+                  100: '#e0f2fe',
+                  200: '#bae6fd',
+                  300: '#7dd3fc',
+                  400: '#38bdf8',
+                  500: '#0ea5e9',
+                  600: '#0284c7',
+                  700: '#0369a1',
+                  800: '#075985',
+                  900: '#0c4a6e',
+                  950: '#082f49',
+                },
+                secondary: {
+                  50: '#f0fdf4',
+                  100: '#dcfce7',
+                  200: '#bbf7d0',
+                  300: '#86efac',
+                  400: '#4ade80',
+                  500: '#22c55e',
+                  600: '#16a34a',
+                  700: '#15803d',
+                  800: '#166534',
+                  900: '#14532d',
+                  950: '#052e16',
+                },
+                accent: {
+                  50: '#faf5ff',
+                  100: '#f3e8ff',
+                  200: '#e9d5ff',
+                  300: '#d8b4fe',
+                  400: '#c084fc',
+                  500: '#a855f7',
+                  600: '#9333ea',
+                  700: '#7e22ce',
+                  800: '#6b21a8',
+                  900: '#581c87',
+                  950: '#3b0764',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Base Styles -->
+      <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+          height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- Offline notification -->
+      <div class="fixed bottom-4 right-4 transform translate-y-full opacity-0 transition-all duration-300 offline:translate-y-0 offline:opacity-100">
+        <div class="bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg">
+          You are currently offline
+        </div>
+      </div>
+   </body>
+</html><element id="0bd1e9fd-a634-4102-b718-a176b6f6a13f" data-section-id="0bd1e9fd-a634-4102-b718-a176b6f6a13f">
+
+<div id="root">
+  <!-- Add favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  
+  <section id="navbar_hero" class="relative bg-neutral-900">
+    <!-- Navigation -->
+    <div x-data="{ isOpen: false }" class="relative" id="el-pz0xzcvz">
+      <nav class="px-4 sm:px-6 lg:px-8 py-4" id="el-ceutzgpp">
+        <div class="max-w-7xl mx-auto flex justify-between items-center element-highlight" id="el-wskgh77w">
+          <!-- Logo -->
+          <div class="flex items-center space-x-3" id="el-vew1qnif">
+            <img src="logo.png" alt="Yield Curve Capital Logo" class="h-10 w-auto">
+
+            <span class="text-2xl font-bold text-white font-heading" id="el-02p2s8r7">Yield Curve Capital</span>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:flex items-center space-x-8" id="el-vfnokrfe">
+            <a href="#about" class="text-neutral-300 hover:text-white transition-colors" id="el-0wqb0h9a">About</a>
+            <a href="#tech" class="text-neutral-300 hover:text-white transition-colors" id="el-jf86cfz8">Technology</a>
+            <a href="#smallcase" class="text-neutral-300 hover:text-white transition-colors" id="el-i80pbzzp">Smallcase</a>
+            <a href="#performance" class="text-neutral-300 hover:text-white transition-colors" id="el-f3actbtj">Performance</a>
+            <button class="px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors" id="el-l1rw5s0l">
+              Get Started
+            </button>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button type="button" class="lg:hidden text-neutral-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" @click="isOpen = !isOpen" aria-controls="mobile-menu" :aria-expanded="isOpen" aria-expanded="false" id="el-uh2z9lyr">
+            <span class="sr-only" id="el-lwqkw08i">Open main menu</span>
+            <svg x-show="!isOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-5d15n12v">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" id="el-da7xt10t"></path>
+            </svg>
+            <svg x-show="isOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-2eybdu6z" style="display: none;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" id="el-wn1yc9sg"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div x-show="isOpen" @click.away="isOpen = false" @resize.window="if (window.innerWidth > 1024) isOpen = false" class="lg:hidden" id="mobile-menu" x-transition:enter="transition ease-out duration-100 transform" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75 transform" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" style="display: none;">
+        <div class="px-4 pt-2 pb-3 space-y-1 bg-neutral-800/80 backdrop-blur-lg" id="el-rf6n1irp">
+          <a href="#about" class="block px-3 py-2 text-base font-medium text-neutral-300 hover:text-white" id="el-rra29g0x">About</a>
+          <a href="#tech" class="block px-3 py-2 text-base font-medium text-neutral-300 hover:text-white" id="el-ty4hw2p4">Technology</a>
+          <a href="#smallcase" class="block px-3 py-2 text-base font-medium text-neutral-300 hover:text-white" id="el-i5y0lpdb">Smallcase</a>
+          <a href="#performance" class="block px-3 py-2 text-base font-medium text-neutral-300 hover:text-white" id="el-ysqoal7b">Performance</a>
+          <button class="w-full mt-4 px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors" id="el-me413keh">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32" id="el-741x5g9t">
+      <div class="text-center" id="el-y5gfltew">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white font-heading leading-tight" id="el-ujqgc083">
+          Advanced AI-Driven Investment Solutions<br id="el-tgiulcv0">
+          <span class="text-primary-400" id="el-kt30h87a">For Modern Investors</span>
+        </h1>
+        <p class="mt-6 text-xl text-neutral-300 max-w-2xl mx-auto" id="el-n51fggx2">
+          Experience institutional-grade portfolio management powered by cutting-edge machine learning algorithms and quantitative strategies for optimal investment returns.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4" id="el-7vmp03ii">
+          <button class="px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-lg font-medium transition-colors" id="el-hhbvhgfx">
+            Start Investing Now
+          </button>
+          <button class="px-8 py-3 border-2 border-neutral-600 hover:border-neutral-500 text-white rounded-lg text-lg font-medium transition-colors" id="el-j1kt2xc7">
+            Discover Our Technology
+          </button>
+        </div>
+      </div>
+
+      <!-- Market Widgets -->
+      <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-neutral-800/50 backdrop-blur-sm rounded-lg p-4">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async="">
+            {
+              "colorTheme": "dark",
+              "dateRange": "1D",
+              "showChart": true,
+              "locale": "in",
+              "largeChartUrl": "",
+              "isTransparent": true,
+              "showSymbolLogo": true,
+              "width": "100%",
+              "height": "400",
+              "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+              "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+              "gridLineColor": "rgba(240, 243, 250, 0)",
+              "scaleFontColor": "rgba(120, 123, 134, 1)",
+              "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+              "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+              "symbolActiveColor": "rgba(41, 98, 255, 0.12)",
+              "tabs": [
+                {
+                  "title": "Indices",
+                  "symbols": [
+                    {
+                      "s": "BSE:SENSEX",
+                      "d": "Sensex"
+                    },
+                    {
+                      "s": "FX_IDC:USDINR",
+                      "d": "INR USD"
+                    },
+                    {
+                      "s": "FOREXCOM:INRUSD",
+                      "d": "INR/USD"
+                    }
+                  ]
+                }
+              ]
+            }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </div>
+        <div class="bg-neutral-800/50 backdrop-blur-sm rounded-lg p-4">
+          <!-- TradingView Advanced Chart Widget -->
+          <div class="tradingview-widget-container">
+            <div id="tradingview_advanced"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+            <script type="text/javascript">
+            new TradingView.widget({
+              "width": "100%",
+              "height": 400,
+              "symbol": "BSE:SENSEX",
+              "interval": "D",
+              "timezone": "Asia/Kolkata",
+              "theme": "dark",
+              "style": "1",
+              "locale": "in",
+              "toolbar_bg": "#f1f3f6",
+              "enable_publishing": false,
+              "hide_side_toolbar": false,
+              "allow_symbol_change": true,
+              "container_id": "tradingview_advanced"
+            });
+            </script>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8" id="el-8ixbzxoe">
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg text-center" id="el-v3addiov">
+          <div class="text-3xl font-bold text-primary-400" id="el-dke57638">₹500Cr+</div>
+          <div class="mt-2 text-neutral-300" id="el-219t1ldz">Assets Under Management</div>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg text-center" id="el-zca8g85m">
+          <div class="text-3xl font-bold text-primary-400" id="el-i802idx9">25%+</div>
+          <div class="mt-2 text-neutral-300" id="el-li9auwkr">Average Annual Returns</div>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg text-center" id="el-h8msh3qv">
+          <div class="text-3xl font-bold text-primary-400" id="el-w9ql5gnm">10,000+</div>
+          <div class="mt-2 text-neutral-300" id="el-1ex9jyav">Active Investors</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer with Social Links -->
+    <footer class="bg-neutral-800/30 mt-20 py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-center space-x-6">
+          <a href="https://linkedin.com/company/yieldcurvecapital" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white">
+            <span class="sr-only">LinkedIn</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+            </svg>
+          </a>
+          <a href="https://twitter.com/yieldcurvecap" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white">
+            <span class="sr-only">Twitter</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Decorative Elements -->
+    <div class="absolute inset-0 -z-10 overflow-hidden" id="el-j2x7rxze">
+      <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_rgba(14,165,233,0.15),_transparent_50%)]" id="el-ft6tzyz5"></div>
+      <div class="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_bottom_left,_rgba(14,165,233,0.1),_transparent_50%)]" id="el-bwqa0ip8"></div>
+    </div>
+  </section>
+</div></element><element id="c680912f-8cae-42e5-aed5-c2e49f0f9c02" data-section-id="c680912f-8cae-42e5-aed5-c2e49f0f9c02">
+
+<htmlCode>
+<div id="root">
+  <section id="about_tech" class="relative bg-neutral-900 py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading">
+          Powered by Advanced Technology
+        </h2>
+        <p class="mt-4 text-lg text-neutral-300 max-w-2xl mx-auto">
+          Our deep tech infrastructure combines cutting-edge ML models with high-frequency trading capabilities
+        </p>
+      </div>
+
+      <!-- Tech Features Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- ML Models -->
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <div class="h-12 w-12 bg-primary-600/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-brain text-primary-400 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Deep Learning Models</h3>
+          <p class="text-neutral-300">Advanced neural networks analyze market patterns and predict optimal entry/exit points with high accuracy.</p>
+        </div>
+
+        <!-- Real-time Analysis -->
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <div class="h-12 w-12 bg-primary-600/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-chart-line text-primary-400 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Real-time Analytics</h3>
+          <p class="text-neutral-300">Process millions of data points per second to identify market inefficiencies and trading opportunities.</p>
+        </div>
+
+        <!-- Risk Management -->
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <div class="h-12 w-12 bg-primary-600/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-shield-alt text-primary-400 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Risk Management</h3>
+          <p class="text-neutral-300">Sophisticated algorithms continuously monitor and adjust positions to maintain optimal risk-reward ratios.</p>
+        </div>
+      </div>
+
+      <!-- Technology Stack -->
+      <div class="mt-20">
+        <div class="text-center mb-12">
+          <h3 class="text-2xl font-bold text-white mb-4">Our Technology Stack</h3>
+          <p class="text-neutral-300 max-w-2xl mx-auto">Built with industry-leading technologies and frameworks</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <!-- Python -->
+          <div class="p-4 bg-neutral-800/30 rounded-lg flex items-center justify-center">
+            <i class="fab fa-python text-3xl text-primary-400 mr-3"></i>
+            <span class="text-white font-medium">Python</span>
+          </div>
+
+          <!-- TensorFlow -->
+          <div class="p-4 bg-neutral-800/30 rounded-lg flex items-center justify-center">
+            <i class="fas fa-network-wired text-3xl text-primary-400 mr-3"></i>
+            <span class="text-white font-medium">TensorFlow</span>
+          </div>
+
+          <!-- AWS -->
+          <div class="p-4 bg-neutral-800/30 rounded-lg flex items-center justify-center">
+            <i class="fab fa-aws text-3xl text-primary-400 mr-3"></i>
+            <span class="text-white font-medium">AWS</span>
+          </div>
+
+          <!-- Kubernetes -->
+          <div class="p-4 bg-neutral-800/30 rounded-lg flex items-center justify-center">
+            <i class="fas fa-cube text-3xl text-primary-400 mr-3"></i>
+            <span class="text-white font-medium">Kubernetes</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Performance Metrics -->
+      <div class="mt-20 p-8 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary-400 mb-2">
+              <span class="inline-flex items-center">
+                <i class="fas fa-bolt mr-2"></i>
+                0.1ms
+              </span>
+            </div>
+            <p class="text-neutral-300">Average Response Time</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary-400 mb-2">
+              <span class="inline-flex items-center">
+                <i class="fas fa-database mr-2"></i>
+                99.99%
+              </span>
+            </div>
+            <p class="text-neutral-300">System Uptime</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary-400 mb-2">
+              <span class="inline-flex items-center">
+                <i class="fas fa-check-circle mr-2"></i>
+                99.9%
+              </span>
+            </div>
+            <p class="text-neutral-300">Execution Accuracy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.1),_transparent_50%)]"></div>
+      <div class="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_bottom_right,_rgba(14,165,233,0.15),_transparent_50%)]"></div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="5c46fa54-1717-4e3d-907b-0aa93d304701" data-section-id="5c46fa54-1717-4e3d-907b-0aa93d304701">
+
+<htmlCode>
+<div id="root">
+  <section id="investment_approach" class="relative bg-neutral-900 py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading">
+          Our Investment Approach
+        </h2>
+        <p class="mt-4 text-lg text-neutral-300 max-w-2xl mx-auto">
+          A systematic, data-driven approach to portfolio management combining quantitative analysis with machine learning
+        </p>
+      </div>
+
+      <!-- Investment Process Steps -->
+      <div class="relative">
+        <!-- Process Timeline -->
+        <div class="hidden lg:block absolute left-1/2 h-full w-0.5 bg-primary-600/30 transform -translate-x-1/2"></div>
+        
+        <!-- Process Steps -->
+        <div class="space-y-12 lg:space-y-24">
+          <!-- Step 1 -->
+          <div class="relative flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 lg:pr-16 text-right">
+              <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+                <h3 class="text-xl font-bold text-white mb-3">Data Collection & Analysis</h3>
+                <p class="text-neutral-300">Continuous monitoring of market data, news, and alternative data sources using advanced ML algorithms.</p>
+              </div>
+            </div>
+            <div class="h-12 w-12 flex items-center justify-center rounded-full bg-primary-600 text-white font-bold text-lg z-10">1</div>
+            <div class="lg:w-1/2 lg:pl-16 mt-4 lg:mt-0"></div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 lg:pr-16"></div>
+            <div class="h-12 w-12 flex items-center justify-center rounded-full bg-primary-600 text-white font-bold text-lg z-10">2</div>
+            <div class="lg:w-1/2 lg:pl-16 mt-4 lg:mt-0">
+              <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+                <h3 class="text-xl font-bold text-white mb-3">Pattern Recognition</h3>
+                <p class="text-neutral-300">Deep learning models identify complex market patterns and potential opportunities across multiple timeframes.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 lg:pr-16 text-right">
+              <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+                <h3 class="text-xl font-bold text-white mb-3">Risk Assessment</h3>
+                <p class="text-neutral-300">Sophisticated risk models evaluate potential trades against market conditions and portfolio constraints.</p>
+              </div>
+            </div>
+            <div class="h-12 w-12 flex items-center justify-center rounded-full bg-primary-600 text-white font-bold text-lg z-10">3</div>
+            <div class="lg:w-1/2 lg:pl-16 mt-4 lg:mt-0"></div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="relative flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 lg:pr-16"></div>
+            <div class="h-12 w-12 flex items-center justify-center rounded-full bg-primary-600 text-white font-bold text-lg z-10">4</div>
+            <div class="lg:w-1/2 lg:pl-16 mt-4 lg:mt-0">
+              <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+                <h3 class="text-xl font-bold text-white mb-3">Portfolio Optimization</h3>
+                <p class="text-neutral-300">Dynamic rebalancing and optimization to maintain optimal risk-adjusted returns across market cycles.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Metrics -->
+      <div class="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">500+</div>
+          <p class="text-neutral-300">Data Sources Analyzed</p>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">24/7</div>
+          <p class="text-neutral-300">Market Monitoring</p>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">0.5s</div>
+          <p class="text-neutral-300">Response Time</p>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">99.9%</div>
+          <p class="text-neutral-300">Execution Rate</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_bottom_left,_rgba(14,165,233,0.1),_transparent_50%)]"></div>
+      <div class="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_rgba(14,165,233,0.15),_transparent_50%)]"></div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="0b2fd885-5c81-49e4-9021-f5d6361f5cdc" data-section-id="0b2fd885-5c81-49e4-9021-f5d6361f5cdc">
+
+<htmlCode>
+<div id="root">
+  <section id="smallcase_offerings" class="relative bg-neutral-900 py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading">
+          Our Smallcase Investment Strategies
+        </h2>
+        <p class="mt-4 text-lg text-neutral-300 max-w-2xl mx-auto">
+          AI-powered investment portfolios designed for different risk appetites and investment goals
+        </p>
+      </div>
+
+      <!-- Smallcase Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Growth Portfolio -->
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <div class="flex justify-between items-start mb-6">
+            <div>
+              <h3 class="text-xl font-bold text-white">Growth Portfolio</h3>
+              <p class="text-primary-400 font-medium mt-1">High Growth</p>
+            </div>
+            <div class="bg-primary-600/20 rounded-lg p-2">
+              <i class="fas fa-chart-line text-primary-400 text-xl"></i>
+            </div>
+          </div>
+          <div class="space-y-3 mb-6">
+            <div class="text-neutral-300">
+              <div class="flex justify-between mb-2">
+                <span>CAGR</span>
+                <span class="text-primary-400 font-semibold">25.8%</span>
+              </div>
+              <div class="w-full bg-neutral-700 rounded-full h-2">
+                <div class="bg-primary-500 h-2 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="text-neutral-300">
+              <div class="flex justify-between mb-2">
+                <span>Volatility</span>
+                <span class="text-primary-400 font-semibold">High</span>
+              </div>
+              <div class="w-full bg-neutral-700 rounded-full h-2">
+                <div class="bg-primary-500 h-2 rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+          <button class="w-full py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors">
+            Invest Now
+          </button>
+        </div>
+
+        <!-- Balanced Portfolio -->
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <div class="flex justify-between items-start mb-6">
+            <div>
+              <h3 class="text-xl font-bold text-white">Balanced Portfolio</h3>
+              <p class="text-primary-400 font-medium mt-1">Moderate Growth</p>
+            </div>
+            <div class="bg-primary-600/20 rounded-lg p-2">
+              <i class="fas fa-balance-scale text-primary-400 text-xl"></i>
+            </div>
+          </div>
+          <div class="space-y-3 mb-6">
+            <div class="text-neutral-300">
+              <div class="flex justify-between mb-2">
+                <span>CAGR</span>
+                <span class="text-primary-400 font-semibold">18.5%</span>
+              </div>
+              <div class="w-full bg-neutral-700 rounded-full h-2">
+                <div class="bg-primary-500 h-2 rounded-full" style="width: 65%"></div>
+              </div>
+            </div>
+            <div class="text-neutral-300">
+              <div class="flex justify-between mb-2">
+                <span>Volatility</span>
+                <span class="text-primary-400 font-semibold">Medium</span>
+              </div>
+              <div class="w-full bg-neutral-700 rounded-full h-2">
+                <div class="bg-primary-500 h-2 rounded-full" style="width: 60%"></div>
+              </div>
+            </div>
+          </div>
+          <button class="w-full py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors">
+            Invest Now
+          </button>
+        </div>
+
+        <!-- Conservative Portfolio -->
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <div class="flex justify-between items-start mb-6">
+            <div>
+              <h3 class="text-xl font-bold text-white">Conservative Portfolio</h3>
+              <p class="text-primary-400 font-medium mt-1">Stable Growth</p>
+            </div>
+            <div class="bg-primary-600/20 rounded-lg p-2">
+              <i class="fas fa-shield-alt text-primary-400 text-xl"></i>
+            </div>
+          </div>
+          <div class="space-y-3 mb-6">
+            <div class="text-neutral-300">
+              <div class="flex justify-between mb-2">
+                <span>CAGR</span>
+                <span class="text-primary-400 font-semibold">12.3%</span>
+              </div>
+              <div class="w-full bg-neutral-700 rounded-full h-2">
+                <div class="bg-primary-500 h-2 rounded-full" style="width: 45%"></div>
+              </div>
+            </div>
+            <div class="text-neutral-300">
+              <div class="flex justify-between mb-2">
+                <span>Volatility</span>
+                <span class="text-primary-400 font-semibold">Low</span>
+              </div>
+              <div class="w-full bg-neutral-700 rounded-full h-2">
+                <div class="bg-primary-500 h-2 rounded-full" style="width: 30%"></div>
+              </div>
+            </div>
+          </div>
+          <button class="w-full py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors">
+            Invest Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Features Grid -->
+      <div class="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <i class="fas fa-robot text-primary-400 text-2xl mb-4"></i>
+          <h4 class="text-lg font-bold text-white mb-2">AI-Driven</h4>
+          <p class="text-neutral-300">Machine learning algorithms optimize portfolio allocation</p>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <i class="fas fa-sync-alt text-primary-400 text-2xl mb-4"></i>
+          <h4 class="text-lg font-bold text-white mb-2">Auto Rebalancing</h4>
+          <p class="text-neutral-300">Periodic rebalancing to maintain optimal asset allocation</p>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <i class="fas fa-chart-bar text-primary-400 text-2xl mb-4"></i>
+          <h4 class="text-lg font-bold text-white mb-2">Performance Tracking</h4>
+          <p class="text-neutral-300">Real-time monitoring and performance analytics</p>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <i class="fas fa-lock text-primary-400 text-2xl mb-4"></i>
+          <h4 class="text-lg font-bold text-white mb-2">Risk Management</h4>
+          <p class="text-neutral-300">Advanced risk management and portfolio protection</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_rgba(14,165,233,0.1),_transparent_50%)]"></div>
+      <div class="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(circle_at_bottom_left,_rgba(14,165,233,0.15),_transparent_50%)]"></div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="02064020-e2eb-4474-a4ef-de15cdae3ff6" data-section-id="02064020-e2eb-4474-a4ef-de15cdae3ff6">
+
+<htmlCode>
+<div id="root">
+  <section id="performance_metrics" class="relative bg-neutral-900 py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading">
+          Performance Metrics
+        </h2>
+        <p class="mt-4 text-lg text-neutral-300 max-w-2xl mx-auto">
+          Consistent outperformance through all market cycles
+        </p>
+      </div>
+
+      <!-- Performance Charts -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <!-- Returns Chart -->
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <div class="flex justify-between items-center mb-6">
+            <h3 class="text-xl font-bold text-white">Historical Returns</h3>
+            <div class="flex items-center space-x-4">
+              <span class="text-primary-400">
+                <i class="fas fa-circle text-xs"></i>
+                <span class="ml-2">Portfolio</span>
+              </span>
+              <span class="text-neutral-400">
+                <i class="fas fa-circle text-xs"></i>
+                <span class="ml-2">Benchmark</span>
+              </span>
+            </div>
+          </div>
+          <div class="w-full h-[300px] flex items-center justify-center">
+            <div id="returnsChart" class="w-full h-full"></div>
+          </div>
+        </div>
+
+        <!-- Risk Metrics -->
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <h3 class="text-xl font-bold text-white mb-6">Risk Analysis</h3>
+          <div class="space-y-6">
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span class="text-neutral-300">Sharpe Ratio</span>
+                <span class="text-primary-400 font-bold">2.8</span>
+              </div>
+              <div class="w-full bg-neutral-700 rounded-full h-2">
+                <div class="bg-primary-500 h-2 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span class="text-neutral-300">Maximum Drawdown</span>
+                <span class="text-primary-400 font-bold">-12.5%</span>
+              </div>
+              <div class="w-full bg-neutral-700 rounded-full h-2">
+                <div class="bg-primary-500 h-2 rounded-full" style="width: 65%"></div>
+              </div>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span class="text-neutral-300">Alpha</span>
+                <span class="text-primary-400 font-bold">8.2%</span>
+              </div>
+              <div class="w-full bg-neutral-700 rounded-full h-2">
+                <div class="bg-primary-500 h-2 rounded-full" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Performance Stats -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">32.5%</div>
+          <p class="text-neutral-300">3-Year CAGR</p>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">15.8%</div>
+          <p class="text-neutral-300">Excess Returns</p>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">0.92</div>
+          <p class="text-neutral-300">Beta</p>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">86%</div>
+          <p class="text-neutral-300">Win Rate</p>
+        </div>
+      </div>
+
+      <!-- Chart Initialization Script -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const options = {
+            chart: {
+              type: 'line',
+              height: 300,
+              background: 'transparent',
+              animations: {
+                enabled: true,
+                easing: 'easeinout',
+                speed: 800,
+                animateGradually: {
+                  enabled: true,
+                  delay: 150
+                }
+              },
+              toolbar: {
+                show: false
+              }
+            },
+            stroke: {
+              curve: 'smooth',
+              width: [3, 2]
+            },
+            colors: ['#0ea5e9', '#525252'],
+            series: [{
+              name: 'Portfolio',
+              data: [100, 120, 115, 134, 168, 182, 210, 252, 265, 295]
+            }, {
+              name: 'Benchmark',
+              data: [100, 110, 108, 120, 138, 142, 156, 168, 172, 180]
+            }],
+            xaxis: {
+              categories: ['2019', '', '2020', '', '2021', '', '2022', '', '2023', ''],
+              labels: {
+                style: {
+                  colors: '#a3a3a3'
+                }
+              }
+            },
+            yaxis: {
+              labels: {
+                style: {
+                  colors: '#a3a3a3'
+                }
+              }
+            },
+            grid: {
+              borderColor: '#404040',
+              strokeDashArray: 5
+            },
+            legend: {
+              show: false
+            },
+            theme: {
+              mode: 'dark'
+            }
+          };
+
+          const chart = new ApexCharts(document.querySelector("#returnsChart"), options);
+          chart.render();
+        });
+      </script>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_rgba(14,165,233,0.1),_transparent_50%)]"></div>
+      <div class="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(circle_at_bottom_left,_rgba(14,165,233,0.15),_transparent_50%)]"></div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="b1507784-6586-4611-9c2a-c4267054fb56" data-section-id="b1507784-6586-4611-9c2a-c4267054fb56">
+
+<htmlCode>
+<div id="root">
+  <section id="team_expertise" class="relative bg-neutral-900 py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading">
+          Our Expert Team
+        </h2>
+        <p class="mt-4 text-lg text-neutral-300 max-w-2xl mx-auto">
+          A diverse team of quant traders, ML engineers, and financial experts
+        </p>
+      </div>
+
+      <!-- Team Members Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <!-- Team Member 1 -->
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <div class="flex items-center mb-4">
+            <img src="https://placehold.co/100x100/DEDEDE/555555?text=VP" alt="Team Member" class="w-16 h-16 rounded-full mr-4">
+            <div>
+              <h3 class="text-xl font-bold text-white">Vivek Patel</h3>
+              <p class="text-primary-400">Co-founder & CEO</p>
+            </div>
+          </div>
+          <p class="text-neutral-300 mb-4">Former Quant Trader at Goldman Sachs with 12+ years of experience in algorithmic trading.</p>
+          <div class="flex space-x-3">
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin text-lg"></i>
+            </a>
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors">
+              <i class="fab fa-twitter text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <div class="flex items-center mb-4">
+            <img src="https://placehold.co/100x100/DEDEDE/555555?text=AS" alt="Team Member" class="w-16 h-16 rounded-full mr-4">
+            <div>
+              <h3 class="text-xl font-bold text-white">Arun Sharma</h3>
+              <p class="text-primary-400">Co-founder & CTO</p>
+            </div>
+          </div>
+          <p class="text-neutral-300 mb-4">ML Expert with PhD in AI from Stanford, previously led AI research at DeepMind.</p>
+          <div class="flex space-x-3">
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin text-lg"></i>
+            </a>
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors">
+              <i class="fab fa-github text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <div class="flex items-center mb-4">
+            <img src="https://placehold.co/100x100/DEDEDE/555555?text=RK" alt="Team Member" class="w-16 h-16 rounded-full mr-4">
+            <div>
+              <h3 class="text-xl font-bold text-white">Riya Kumar</h3>
+              <p class="text-primary-400">Head of Research</p>
+            </div>
+          </div>
+          <p class="text-neutral-300 mb-4">Quantitative Researcher with expertise in statistical arbitrage and portfolio optimization.</p>
+          <div class="flex space-x-3">
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin text-lg"></i>
+            </a>
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors">
+              <i class="fas fa-paper-plane text-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expertise Stats -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">50+</div>
+          <p class="text-neutral-300">Team Members</p>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">200+</div>
+          <p class="text-neutral-300">Research Papers</p>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">15+</div>
+          <p class="text-neutral-300">Patents Filed</p>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">20+</div>
+          <p class="text-neutral-300">Years Combined Experience</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_rgba(14,165,233,0.1),_transparent_50%)]"></div>
+      <div class="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(circle_at_bottom_left,_rgba(14,165,233,0.15),_transparent_50%)]"></div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="e1ddec51-2e8d-4807-86b8-b0e09bb74ad5" data-section-id="e1ddec51-2e8d-4807-86b8-b0e09bb74ad5">
+
+<htmlCode>
+<div id="root">
+  <section id="client_testimonials" class="relative bg-neutral-900 py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading">
+          What Our Clients Say
+        </h2>
+        <p class="mt-4 text-lg text-neutral-300 max-w-2xl mx-auto">
+          Hear from investors who have experienced the power of AI-driven portfolio management
+        </p>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <div class="flex items-center mb-6">
+            <img src="https://placehold.co/80x80/DEDEDE/555555?text=RJ" alt="Client" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h3 class="text-lg font-bold text-white">Rajesh Jain</h3>
+              <p class="text-primary-400 text-sm">Angel Investor</p>
+            </div>
+          </div>
+          <p class="text-neutral-300 mb-4">
+            "The AI-driven approach has consistently delivered superior returns. The automatic rebalancing feature ensures my portfolio stays optimized without any manual intervention."
+          </p>
+          <div class="flex text-primary-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <div class="flex items-center mb-6">
+            <img src="https://placehold.co/80x80/DEDEDE/555555?text=SP" alt="Client" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h3 class="text-lg font-bold text-white">Sneha Patel</h3>
+              <p class="text-primary-400 text-sm">Portfolio Manager</p>
+            </div>
+          </div>
+          <p class="text-neutral-300 mb-4">
+            "The risk management capabilities are exceptional. I've seen consistent growth while maintaining optimal risk levels across different market conditions."
+          </p>
+          <div class="flex text-primary-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <div class="flex items-center mb-6">
+            <img src="https://placehold.co/80x80/DEDEDE/555555?text=AK" alt="Client" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h3 class="text-lg font-bold text-white">Amit Kumar</h3>
+              <p class="text-primary-400 text-sm">Tech Entrepreneur</p>
+            </div>
+          </div>
+          <p class="text-neutral-300 mb-4">
+            "As a tech professional, I appreciate the sophisticated ML algorithms. The performance has been remarkable, significantly outperforming traditional strategies."
+          </p>
+          <div class="flex text-primary-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Client Stats -->
+      <div class="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">10,000+</div>
+          <p class="text-neutral-300">Active Investors</p>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">98%</div>
+          <p class="text-neutral-300">Client Satisfaction</p>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">4.8/5</div>
+          <p class="text-neutral-300">Average Rating</p>
+        </div>
+        <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">92%</div>
+          <p class="text-neutral-300">Client Retention</p>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="mt-16 text-center">
+        <button class="px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-lg font-medium transition-colors">
+          Join Our Success Story
+        </button>
+      </div>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_rgba(14,165,233,0.1),_transparent_50%)]"></div>
+      <div class="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(circle_at_bottom_left,_rgba(14,165,233,0.15),_transparent_50%)]"></div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="02fe2649-f703-48be-b858-29af811116c6" data-section-id="02fe2649-f703-48be-b858-29af811116c6">
+
+<htmlCode>
+<div id="root">
+  <section id="contact_form" class="relative bg-neutral-900 py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading">
+          Get Started Today
+        </h2>
+        <p class="mt-4 text-lg text-neutral-300 max-w-2xl mx-auto">
+          Begin your journey towards AI-powered portfolio optimization
+        </p>
+      </div>
+
+      <!-- Contact Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Contact Form -->
+        <div class="p-8 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+          <form x-data="{ 
+            name: '', 
+            email: '', 
+            phone: '',
+            investmentAmount: '',
+            message: '',
+            submitted: false,
+            loading: false,
+            submit() {
+              this.loading = true;
+              // Simulated form submission
+              setTimeout(() => {
+                this.loading = false;
+                this.submitted = true;
+              }, 1000);
+            }
+          }" @submit.prevent="submit()" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-neutral-300">Full Name</label>
+              <input type="text" 
+                     id="name" 
+                     x-model="name"
+                     class="mt-1 block w-full rounded-md bg-neutral-700 border-neutral-600 text-white focus:border-primary-500 focus:ring-primary-500"
+                     required>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-neutral-300">Email Address</label>
+              <input type="email" 
+                     id="email" 
+                     x-model="email"
+                     class="mt-1 block w-full rounded-md bg-neutral-700 border-neutral-600 text-white focus:border-primary-500 focus:ring-primary-500"
+                     required>
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-medium text-neutral-300">Phone Number</label>
+              <input type="tel" 
+                     id="phone" 
+                     x-model="phone"
+                     class="mt-1 block w-full rounded-md bg-neutral-700 border-neutral-600 text-white focus:border-primary-500 focus:ring-primary-500">
+            </div>
+
+            <div>
+              <label for="investment" class="block text-sm font-medium text-neutral-300">Investment Amount (₹)</label>
+              <select id="investment" 
+                      x-model="investmentAmount"
+                      class="mt-1 block w-full rounded-md bg-neutral-700 border-neutral-600 text-white focus:border-primary-500 focus:ring-primary-500">
+                <option value="">Select Amount</option>
+                <option value="50000">₹50,000 - ₹1,00,000</option>
+                <option value="100000">₹1,00,000 - ₹5,00,000</option>
+                <option value="500000">₹5,00,000 - ₹10,00,000</option>
+                <option value="1000000">₹10,00,000+</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-neutral-300">Message</label>
+              <textarea id="message" 
+                        x-model="message"
+                        rows="4" 
+                        class="mt-1 block w-full rounded-md bg-neutral-700 border-neutral-600 text-white focus:border-primary-500 focus:ring-primary-500"></textarea>
+            </div>
+
+            <div>
+              <button type="submit" 
+                      class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors"
+                      :disabled="loading">
+                <span x-show="!loading">Submit Request</span>
+                <span x-show="loading" class="flex items-center">
+                  <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Processing...
+                </span>
+              </button>
+            </div>
+
+            <!-- Success Message -->
+            <div x-show="submitted" 
+                 x-transition
+                 class="text-center p-4 bg-primary-600/20 rounded-lg">
+              <p class="text-primary-400">Thank you for your interest! We'll be in touch shortly.</p>
+            </div>
+          </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="space-y-8">
+          <!-- Address Card -->
+          <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+            <div class="flex items-center mb-4">
+              <div class="h-12 w-12 bg-primary-600/20 rounded-lg flex items-center justify-center">
+                <i class="fas fa-building text-primary-400 text-2xl"></i>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-bold text-white">Office Location</h3>
+                <p class="text-neutral-300">Mumbai, Maharashtra</p>
+              </div>
+            </div>
+            <p class="text-neutral-300">WeWork, Bandra Kurla Complex<br>Mumbai, Maharashtra 400051</p>
+          </div>
+
+          <!-- Contact Info Card -->
+          <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+            <div class="flex items-center mb-4">
+              <div class="h-12 w-12 bg-primary-600/20 rounded-lg flex items-center justify-center">
+                <i class="fas fa-phone text-primary-400 text-2xl"></i>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-bold text-white">Contact Info</h3>
+                <p class="text-neutral-300">Get in touch</p>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <p class="text-neutral-300"><i class="fas fa-envelope text-primary-400 mr-2"></i>contact@yieldcurvecapital.com</p>
+              <p class="text-neutral-300"><i class="fas fa-phone text-primary-400 mr-2"></i>+91 98765 43210</p>
+            </div>
+          </div>
+
+          <!-- Working Hours Card -->
+          <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-lg border border-neutral-700">
+            <div class="flex items-center mb-4">
+              <div class="h-12 w-12 bg-primary-600/20 rounded-lg flex items-center justify-center">
+                <i class="fas fa-clock text-primary-400 text-2xl"></i>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-bold text-white">Working Hours</h3>
+                <p class="text-neutral-300">Market hours</p>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <p class="text-neutral-300">Monday - Friday: 9:00 AM - 5:00 PM</p>
+              <p class="text-neutral-300">Saturday - Sunday: Closed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_rgba(14,165,233,0.1),_transparent_50%)]"></div>
+      <div class="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(circle_at_bottom_left,_rgba(14,165,233,0.15),_transparent_50%)]"></div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="975bca5d-6556-4fe0-a483-835668b1551d" data-section-id="975bca5d-6556-4fe0-a483-835668b1551d">
+
+<div id="root">
+  <section id="compliance_footer" class="relative bg-neutral-900 pt-24">
+    <!-- Compliance & Disclaimers -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16" id="el-uq25wb80">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8" id="el-w3o27ud3">
+        <!-- Company Info -->
+        <div class="space-y-6" id="el-lup8o7nc">
+          <h3 class="text-xl font-bold text-white mb-4" id="el-tpwln9d3">Yield Curve Capital</h3>
+          <p class="text-neutral-300 text-sm" id="el-yljazfoq">
+            A SEBI registered portfolio management service provider focused on AI-driven investment strategies.
+          </p>
+          <div class="flex space-x-4" id="el-1uwx1iq5">
+            <a href="#" class="text-neutral-400 hover:text-primary-400 transition-colors" id="el-yumrxx7r">
+              <i class="fab fa-linkedin text-xl" id="el-qrghrn37"></i>
+            </a>
+            <a href="#" class="text-neutral-400 hover:text-primary-400 transition-colors" id="el-nspvnyzu">
+              <i class="fab fa-twitter text-xl" id="el-31q4zphi"></i>
+            </a>
+            <a href="#" class="text-neutral-400 hover:text-primary-400 transition-colors" id="el-gm6lc87c">
+              <i class="fab fa-instagram text-xl" id="el-2rc439cq"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div id="el-fj92oma6">
+          <h4 class="text-lg font-semibold text-white mb-4" id="el-b6w35nlq">Quick Links</h4>
+          <ul class="space-y-2" id="el-o4rfsw39">
+            <li id="el-qz5xun75"><a href="#" class="text-neutral-300 hover:text-primary-400 transition-colors text-sm" id="el-vintk3eq">About Us</a></li>
+            <li id="el-8stez5q9"><a href="#" class="text-neutral-300 hover:text-primary-400 transition-colors text-sm" id="el-evslxgrc">Our Team</a></li>
+            <li id="el-6f12ecjg"><a href="#" class="text-neutral-300 hover:text-primary-400 transition-colors text-sm" id="el-rdacxfbq">Smallcase Offerings</a></li>
+            <li id="el-tpcqya1l"><a href="#" class="text-neutral-300 hover:text-primary-400 transition-colors text-sm" id="el-16f9fker">Performance</a></li>
+            <li id="el-a7mwunvn"><a href="#" class="text-neutral-300 hover:text-primary-400 transition-colors text-sm" id="el-8svp2n2c">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div id="el-rwhtmxad">
+          <h4 class="text-lg font-semibold text-white mb-4" id="el-jrug0kph">Legal</h4>
+          <ul class="space-y-2" id="el-2k2yo2m0">
+            <li id="el-c98cbgmc"><a href="#" class="text-neutral-300 hover:text-primary-400 transition-colors text-sm" id="el-2n8e9us7">Terms of Service</a></li>
+            <li id="el-yh5ss0zm"><a href="#" class="text-neutral-300 hover:text-primary-400 transition-colors text-sm" id="el-kt8394w5">Privacy Policy</a></li>
+            <li id="el-9vtaxfu7"><a href="#" class="text-neutral-300 hover:text-primary-400 transition-colors text-sm" id="el-w8lgwxro">Risk Disclosure</a></li>
+            <li id="el-dc1zb3nu"><a href="#" class="text-neutral-300 hover:text-primary-400 transition-colors text-sm" id="el-u8wbra67">Regulatory Disclosures</a></li>
+            <li id="el-5s16ev8e"><a href="#" class="text-neutral-300 hover:text-primary-400 transition-colors text-sm" id="el-itmplxbo">Grievance Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div id="el-w26vdikq">
+          <h4 class="text-lg font-semibold text-white mb-4" id="el-7xl9xhgv">Contact Us</h4>
+          <ul class="space-y-2" id="el-h68r89y0">
+            <li class="text-neutral-300 text-sm flex items-start" id="el-zamsv54t">
+              <i class="fas fa-map-marker-alt text-primary-400 mt-1 mr-2" id="el-qo2p7sy2"></i>
+              <span id="el-ggunfdee" class="element-highlight">WeWork, Bandra Kurla Complex<br id="el-06q1zhxc">Mumbai, Maharashtra 400051</span>
+            </li>
+            <li class="text-neutral-300 text-sm flex items-center" id="el-0i57m6sp">
+              <i class="fas fa-envelope text-primary-400 mr-2" id="el-bl1lva82"></i>
+              <span id="el-x8q8u9u2" class="element-highlight">contact@yieldcc.com</span>
+            </li>
+            <li class="text-neutral-300 text-sm flex items-center" id="el-6z20hk4e">
+              <i class="fas fa-phone text-primary-400 mr-2" id="el-aaj6c1ar"></i>
+              <span id="el-eqpmkhzy">+91 98765 43210</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compliance Text -->
+    <div class="w-full bg-neutral-800/50 backdrop-blur-sm border-t border-neutral-700" id="el-t9uf0v26">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" id="el-s3bxe2vg">
+        <div class="text-sm text-neutral-400 space-y-4" id="el-scbgloab">
+          <p id="el-gqb9pn9e">
+            Mutual Fund investments are subject to market risks, read all scheme related documents carefully. Past performance is not indicative of future returns. Please consider your specific investment requirements before choosing a fund, or designing a portfolio that suits your needs.
+          </p>
+          <p id="el-aozpqsch">
+            Yield Curve Capital (YCC) is a SEBI registered Portfolio Manager. Registration code: PM/INP000012345. Investment in securities market are subject to market risks, read all the related documents carefully before investing.
+          </p>
+          <p id="el-rlzoy03n">
+            The information provided on this website is for general purposes only and should not be considered as financial advice. Consult your financial advisor before making any investment decisions.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="w-full bg-neutral-800 py-4" id="el-4n19w499">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-17kv33h5">
+        <div class="flex flex-col md:flex-row justify-between items-center" id="el-wkn6ul3j">
+          <p class="text-sm text-neutral-400" id="el-8r243d8z">
+            © 2024 Yield Curve Capital. All rights reserved.
+          </p>
+          <div class="flex space-x-4 mt-4 md:mt-0" id="el-gmluqknd">
+            <a href="#" class="text-sm text-neutral-400 hover:text-primary-400 transition-colors" id="el-dhodjojq">Terms</a>
+            <a href="#" class="text-sm text-neutral-400 hover:text-primary-400 transition-colors" id="el-eufx9clr">Privacy</a>
+            <a href="#" class="text-sm text-neutral-400 hover:text-primary-400 transition-colors" id="el-d4td0f3y">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="absolute inset-0 -z-10 overflow-hidden" id="el-ve4jx753">
+      <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_rgba(14,165,233,0.1),_transparent_50%)]" id="el-glvkq3ad"></div>
+      <div class="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(circle_at_bottom_left,_rgba(14,165,233,0.15),_transparent_50%)]" id="el-r4x1o65y"></div>
+    </div>
+  </section>
+</div></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
