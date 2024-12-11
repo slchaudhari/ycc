@@ -1,0 +1,1477 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="AI-generated website">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="index, follow">
+      
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  50: '#f0f9ff',
+                  100: '#e0f2fe',
+                  200: '#bae6fd',
+                  300: '#7dd3fc',
+                  400: '#38bdf8',
+                  500: '#0ea5e9',
+                  600: '#0284c7',
+                  700: '#0369a1',
+                  800: '#075985',
+                  900: '#0c4a6e',
+                  950: '#082f49',
+                },
+                secondary: {
+                  50: '#f0fdf4',
+                  100: '#dcfce7',
+                  200: '#bbf7d0',
+                  300: '#86efac',
+                  400: '#4ade80',
+                  500: '#22c55e',
+                  600: '#16a34a',
+                  700: '#15803d',
+                  800: '#166534',
+                  900: '#14532d',
+                  950: '#052e16',
+                },
+                accent: {
+                  50: '#faf5ff',
+                  100: '#f3e8ff',
+                  200: '#e9d5ff',
+                  300: '#d8b4fe',
+                  400: '#c084fc',
+                  500: '#a855f7',
+                  600: '#9333ea',
+                  700: '#7e22ce',
+                  800: '#6b21a8',
+                  900: '#581c87',
+                  950: '#3b0764',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Base Styles -->
+      <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+          height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- Offline notification -->
+      <div class="fixed bottom-4 right-4 transform translate-y-full opacity-0 transition-all duration-300 offline:translate-y-0 offline:opacity-100">
+        <div class="bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg">
+          You are currently offline
+        </div>
+      </div>
+   </body>
+</html><element id="5c898591-5b68-4353-a2cd-f2c516366ffe" data-section-id="5c898591-5b68-4353-a2cd-f2c516366ffe">
+
+<div id="root">
+    <section id="navbar_hero" class="min-h-screen relative bg-neutral-900">
+        <!-- Navigation -->
+        <div x-data="{ isOpen: false }">
+            <nav class="fixed w-full bg-neutral-900/80 backdrop-blur-lg z-50 border-b border-neutral-800">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between h-16">
+                        <div class="flex items-center">
+                            <a href="/" class="flex items-center">
+                                <img class="h-8 w-auto" src="https://contact@yieldcc.com/logo.png" alt="Yield Curve Capital Logo" />
+                                <span class="ml-2 text-lg font-bold text-white">Yield Curve Capital</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Desktop Navigation -->
+                        <div class="hidden lg:flex lg:items-center lg:space-x-8">
+                            <a href="#about" class="text-neutral-300 hover:text-white transition">About</a>
+                            <a href="#technology" class="text-neutral-300 hover:text-white transition">Technology</a>
+                            <a href="#smallcase" class="text-neutral-300 hover:text-white transition">Smallcase</a>
+                            <a href="#performance" class="text-neutral-300 hover:text-white transition">Performance</a>
+                            <a href="#pitch" class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition">
+                                Pitch Your Startup
+                            </a>
+                        </div>
+
+                        <!-- Mobile menu button -->
+                        <div class="flex lg:hidden">
+                            <button type="button" 
+                                    @click="isOpen = !isOpen"
+                                    class="text-neutral-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                                    aria-controls="mobile-menu"
+                                    :aria-expanded="isOpen">
+                                <span class="sr-only">Open main menu</span>
+                                <svg x-show="!isOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                                <svg x-show="isOpen" x-cloak class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile menu -->
+                <div x-show="isOpen" 
+                     x-cloak
+                     id="mobile-menu"
+                     class="lg:hidden"
+                     x-transition:enter="transition ease-out duration-100 transform"
+                     x-transition:enter-start="opacity-0 scale-95"
+                     x-transition:enter-end="opacity-100 scale-100"
+                     x-transition:leave="transition ease-in duration-75 transform"
+                     x-transition:leave-start="opacity-100 scale-100"
+                     x-transition:leave-end="opacity-0 scale-95"
+                     @click.away="isOpen = false"
+                     @resize.window="if (window.innerWidth > 1024) isOpen = false">
+                    <div class="px-2 pt-2 pb-3 space-y-1 bg-neutral-800/80 backdrop-blur-lg">
+                        <a href="#about" class="block px-3 py-2 text-neutral-300 hover:text-white">About</a>
+                        <a href="#technology" class="block px-3 py-2 text-neutral-300 hover:text-white">Technology</a>
+                        <a href="#smallcase" class="block px-3 py-2 text-neutral-300 hover:text-white">Smallcase</a>
+                        <a href="#performance" class="block px-3 py-2 text-neutral-300 hover:text-white">Performance</a>
+                        <a href="#pitch" class="block px-3 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700">Pitch Your Startup</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="relative pt-16">
+            <div class="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-900/95 to-neutral-900/90"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
+                <div class="text-center relative z-10">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 font-heading">
+                        Advanced AI-Driven Investment Solutions
+                    </h1>
+                    <p class="text-xl sm:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto">
+                        Experience institutional-grade portfolio management powered by cutting-edge machine learning algorithms and quantitative strategies for optimal investment returns.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href='https://forms.zohopublic.in/sauravyie1/form/PitchtoYieldCurveCapital/formperma/s27Yp83EpHFIGcVdQY7VY-BEBZD7QJyymjmF1rz7RXY' 
+                           onclick="zforms_open_window(this.href, 648, 700); return false"
+                           class="px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-semibold">
+                            Pitch Your Startup
+                        </a>
+                        <a href="#technology" class="px-8 py-4 border border-neutral-700 text-white rounded-lg hover:bg-neutral-800 transition font-semibold">
+                            Discover Our Technology
+                        </a>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-20">
+                        <div class="p-6 rounded-xl bg-neutral-800/50 backdrop-blur-sm">
+                            <div class="text-3xl font-bold text-white mb-2">₹500Cr+</div>
+                            <div class="text-neutral-400">Assets Under Management</div>
+                        </div>
+                        <div class="p-6 rounded-xl bg-neutral-800/50 backdrop-blur-sm">
+                            <div class="text-3xl font-bold text-white mb-2">25%+</div>
+                            <div class="text-neutral-400">Average Annual Returns</div>
+                        </div>
+                        <div class="p-6 rounded-xl bg-neutral-800/50 backdrop-blur-sm">
+                            <div class="text-3xl font-bold text-white mb-2">10,000+</div>
+                            <div class="text-neutral-400">Active Investors</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Proof -->
+                    <div class="flex justify-center gap-6 mt-12">
+                        <a href="https://linkedin.com/company/yieldcurvecapital" class="text-neutral-400 hover:text-white transition">
+                            <span class="sr-only">LinkedIn</span>
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="https://x.com/Yieldcc" class="text-neutral-400 hover:text-white transition">
+                            <span class="sr-only">Twitter</span>
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zoho Forms Script -->
+        <script type="text/javascript">
+            function zforms_open_window(url, height, width) {
+                var leftPos = 0;
+                var topPos = 0;
+                if(screen) {
+                    leftPos = (screen.width - width) / 2;
+                    topPos = (screen.height - height) / 2;
+                    window.open(url, null, 'width='+width+',height='+height+',left='+leftPos+',top='+topPos+', toolbar=0, location=0, status=1, scrollbars=1, resizable=1');
+                }
+            }
+        </script>
+    </section>
+</div></element><element id="55caf1f5-e973-4ade-b6aa-00ae5799a78c" data-section-id="55caf1f5-e973-4ade-b6aa-00ae5799a78c">
+
+<section id="about" class="py-24 bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4 font-heading">
+                Powered by Advanced Technology
+            </h2>
+            <p class="text-lg text-neutral-600 max-w-3xl mx-auto">
+                Our deep tech infrastructure combines cutting-edge ML models with high-frequency trading capabilities
+            </p>
+        </div>
+
+        <!-- Technology Stack Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <div class="p-6 border border-neutral-200 rounded-xl bg-white">
+                <div class="text-primary-600 mb-4">
+                    <i class="fas fa-brain text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-neutral-900 mb-3">Deep Learning Models</h3>
+                <p class="text-neutral-600">Advanced neural networks analyze market patterns and predict optimal entry/exit points with high accuracy.</p>
+            </div>
+
+            <div class="p-6 border border-neutral-200 rounded-xl bg-white">
+                <div class="text-primary-600 mb-4">
+                    <i class="fas fa-chart-line text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-neutral-900 mb-3">Real-time Analytics</h3>
+                <p class="text-neutral-600">Process millions of data points per second to identify market inefficiencies and trading opportunities.</p>
+            </div>
+
+            <div class="p-6 border border-neutral-200 rounded-xl bg-white">
+                <div class="text-primary-600 mb-4">
+                    <i class="fas fa-shield-alt text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-neutral-900 mb-3">Risk Management</h3>
+                <p class="text-neutral-600">Sophisticated algorithms continuously monitor and adjust positions to maintain optimal risk-reward ratios.</p>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="mt-24">
+            <h2 class="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4 text-center font-heading">
+                Our Leadership Team
+            </h2>
+            <p class="text-lg text-neutral-600 text-center max-w-3xl mx-auto mb-16">
+                Meet our experienced founders with a proven track record in entrepreneurship and financial markets
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <!-- Founder 1 -->
+                <div class="flex flex-col items-center">
+                    <img src="https://avatar.iran.liara.run/public" alt="Shantanu Gawande" class="w-48 h-48 rounded-full mb-6 border-4 border-primary-100">
+                    <h3 class="text-xl font-bold text-neutral-900 mb-2">Shantanu Gawande</h3>
+                    <p class="text-primary-600 font-medium mb-4">Co-founder & SEBI Registered RA</p>
+                    <p class="text-neutral-600 text-center">Serial entrepreneur and registered research analyst with extensive experience in portfolio management and market analysis. Former co-founder at HTNP Industries.</p>
+                </div>
+
+                <!-- Founder 2 -->
+                <div class="flex flex-col items-center">
+                    <img src="https://avatar.iran.liara.run/public" alt="Saurav L. Chaudhari" class="w-48 h-48 rounded-full mb-6 border-4 border-primary-100">
+                    <h3 class="text-xl font-bold text-neutral-900 mb-2">Saurav L. Chaudhari</h3>
+                    <p class="text-primary-600 font-medium mb-4">Co-founder & Quant</p>
+                    <p class="text-neutral-600 text-center">Quantitative trading specialist and serial entrepreneur with expertise in algorithmic strategies. Previously co-founded and led technology initiatives at HTNP Industries.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20">
+            <div class="text-center">
+                <div class="text-3xl font-bold text-primary-600 mb-2">50+</div>
+                <div class="text-neutral-600">Team Members</div>
+            </div>
+            <div class="text-center">
+                <div class="text-3xl font-bold text-primary-600 mb-2">200+</div>
+                <div class="text-neutral-600">Research Papers</div>
+            </div>
+            <div class="text-center">
+                <div class="text-3xl font-bold text-primary-600 mb-2">15+</div>
+                <div class="text-neutral-600">Patents Filed</div>
+            </div>
+            <div class="text-center">
+                <div class="text-3xl font-bold text-primary-600 mb-2">20+</div>
+                <div class="text-neutral-600">Years Experience</div>
+            </div>
+        </div>
+
+        <!-- Startup Pitch Form -->
+        <div class="mt-24 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4 font-heading">
+                Pitch Your Startup
+            </h2>
+            <p class="text-lg text-neutral-600 max-w-3xl mx-auto mb-8">
+                We invest in promising tech-driven startups. Share your vision with us.
+            </p>
+            <script type="text/javascript">
+                function zforms_open_window(url, height, width) {
+                    var leftPos = 0;
+                    var topPos = 0;
+                    if(screen) {
+                        leftPos = (screen.width - width) / 2;
+                        topPos = (screen.height - height) / 2;
+                        window.open(url, null, 'width='+width+',height='+height+',left='+leftPos+',top='+topPos+', toolbar=0, location=0, status=1, scrollbars=1, resizable=1');
+                    }
+                }
+            </script>
+            <a href='https://forms.zohopublic.in/sauravyie1/form/PitchtoYieldCurveCapital/formperma/s27Yp83EpHFIGcVdQY7VY-BEBZD7QJyymjmF1rz7RXY' 
+               class="inline-block px-8 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors"
+               title="Pitch to Yield Curve Capital" 
+               target='_blank' 
+               onclick="zforms_open_window(this.href, 648, 700); return false">
+                Submit Your Pitch
+            </a>
+        </div>
+    </div>
+</section></element><element id="8ad4912b-f37d-47b0-9688-943f11c7e41a" data-section-id="8ad4912b-f37d-47b0-9688-943f11c7e41a">
+
+<section id="performance_metrics" class="py-24 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4 font-heading">
+                Performance Metrics
+            </h2>
+            <p class="text-lg text-neutral-300 max-w-3xl mx-auto">
+                Consistent outperformance through all market cycles
+            </p>
+        </div>
+
+        <!-- Performance Charts -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <!-- Historical Returns Chart -->
+            <div class="bg-neutral-800 p-6 rounded-xl border border-neutral-700">
+                <h3 class="text-xl font-bold text-white mb-4">Historical Returns</h3>
+                <div id="historicalReturnsChart" class="h-80"></div>
+            </div>
+
+            <!-- Risk Analysis Chart -->
+            <div class="bg-neutral-800 p-6 rounded-xl border border-neutral-700">
+                <h3 class="text-xl font-bold text-white mb-4">Portfolio vs Benchmark</h3>
+                <div id="benchmarkComparisonChart" class="h-80"></div>
+            </div>
+        </div>
+
+        <!-- Key Metrics -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-6 bg-neutral-800 rounded-xl border border-neutral-700">
+                <p class="text-neutral-400 text-sm mb-2">Sharpe Ratio</p>
+                <p class="text-3xl font-bold text-white">2.8</p>
+                <p class="text-xs text-neutral-400 mt-2">Risk-adjusted returns measure</p>
+            </div>
+
+            <div class="p-6 bg-neutral-800 rounded-xl border border-neutral-700">
+                <p class="text-neutral-400 text-sm mb-2">Maximum Drawdown</p>
+                <p class="text-3xl font-bold text-white">-12.5%</p>
+                <p class="text-xs text-neutral-400 mt-2">Peak to trough decline</p>
+            </div>
+
+            <div class="p-6 bg-neutral-800 rounded-xl border border-neutral-700">
+                <p class="text-neutral-400 text-sm mb-2">Alpha</p>
+                <p class="text-3xl font-bold text-white">8.2%</p>
+                <p class="text-xs text-neutral-400 mt-2">Excess returns vs benchmark</p>
+            </div>
+
+            <div class="p-6 bg-neutral-800 rounded-xl border border-neutral-700">
+                <p class="text-neutral-400 text-sm mb-2">Beta</p>
+                <p class="text-3xl font-bold text-white">0.92</p>
+                <p class="text-xs text-neutral-400 mt-2">Market correlation measure</p>
+            </div>
+        </div>
+
+        <!-- Additional Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            <div class="text-center p-6 bg-neutral-800 rounded-xl border border-neutral-700">
+                <div class="text-3xl font-bold text-white mb-2">32.5%</div>
+                <div class="text-neutral-400">3-Year CAGR</div>
+            </div>
+            <div class="text-center p-6 bg-neutral-800 rounded-xl border border-neutral-700">
+                <div class="text-3xl font-bold text-white mb-2">15.8%</div>
+                <div class="text-neutral-400">Excess Returns</div>
+            </div>
+            <div class="text-center p-6 bg-neutral-800 rounded-xl border border-neutral-700">
+                <div class="text-3xl font-bold text-white mb-2">86%</div>
+                <div class="text-neutral-400">Win Rate</div>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="mt-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Our Leadership</h2>
+                <p class="text-lg text-neutral-300">Experienced professionals driving innovation in investment</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-neutral-800 p-6 rounded-xl border border-neutral-700">
+                    <h3 class="text-xl font-bold text-white mb-2">Shantanu</h3>
+                    <p class="text-neutral-300 mb-4">SEBI Registered Research Analyst</p>
+                    <p class="text-neutral-400 text-sm">Serial entrepreneur with extensive experience in financial markets. Previously worked at HTNP Industries.</p>
+                </div>
+                <div class="bg-neutral-800 p-6 rounded-xl border border-neutral-700">
+                    <h3 class="text-xl font-bold text-white mb-2">Saurav</h3>
+                    <p class="text-neutral-300 mb-4">Quantitative Analyst</p>
+                    <p class="text-neutral-400 text-sm">Serial entrepreneur and quantitative expert. Collaborated with Shantanu at HTNP Industries.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Startup Pitch Form -->
+        <div class="text-center mt-16">
+            <h3 class="text-2xl font-bold text-white mb-4">Have a Tech-Driven Startup?</h3>
+            <p class="text-neutral-300 mb-6">We invest in promising technology startups. Share your pitch with us.</p>
+            <script type="text/javascript">
+                function zforms_open_window(url, height, width){
+                    var leftPos = 0;
+                    var topPos = 0;
+                    if(screen){
+                        leftPos = (screen.width - width) / 2;
+                        topPos = (screen.height - height) / 2;
+                        window.open(url, null, 'width='+width+',height='+height+',left='+leftPos+',top='+topPos+', toolbar=0, location=0, status=1, scrollbars=1, resizable=1');
+                    }
+                }
+            </script>
+            <a href='https://forms.zohopublic.in/sauravyie1/form/PitchtoYieldCurveCapital/formperma/s27Yp83EpHFIGcVdQY7VY-BEBZD7QJyymjmF1rz7RXY' 
+               class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-semibold"
+               title="Pitch to Yield Curve Capital" 
+               target='_blank' 
+               onclick="zforms_open_window(this.href, 648, 700); return false">
+                Submit Your Pitch
+            </a>
+        </div>
+    </div>
+
+    <!-- Chart Initialization Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Historical Returns Chart
+            var historicalOptions = {
+                chart: {
+                    type: 'line',
+                    height: 320,
+                    toolbar: { show: false },
+                    background: 'transparent'
+                },
+                series: [{
+                    name: 'Portfolio Returns',
+                    data: [25, 35, 45, 40, 55, 65, 75, 85, 95, 100]
+                }],
+                colors: ['#0ea5e9'],
+                xaxis: {
+                    categories: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+                    labels: { style: { colors: '#9ca3af' } }
+                },
+                yaxis: {
+                    labels: { style: { colors: '#9ca3af' } }
+                },
+                grid: { borderColor: '#374151' },
+                theme: { mode: 'dark' }
+            };
+
+            // Benchmark Comparison Chart
+            var benchmarkOptions = {
+                chart: {
+                    type: 'area',
+                    height: 320,
+                    toolbar: { show: false },
+                    background: 'transparent'
+                },
+                series: [{
+                    name: 'Portfolio',
+                    data: [30, 40, 45, 50, 55, 60, 70, 80, 90, 100]
+                }, {
+                    name: 'Nifty50',
+                    data: [25, 32, 38, 42, 48, 50, 58, 65, 72, 80]
+                }],
+                colors: ['#0ea5e9', '#22c55e'],
+                xaxis: {
+                    categories: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+                    labels: { style: { colors: '#9ca3af' } }
+                },
+                yaxis: {
+                    labels: { style: { colors: '#9ca3af' } }
+                },
+                grid: { borderColor: '#374151' },
+                theme: { mode: 'dark' }
+            };
+
+            var historicalChart = new ApexCharts(document.querySelector("#historicalReturnsChart"), historicalOptions);
+            var benchmarkChart = new ApexCharts(document.querySelector("#benchmarkComparisonChart"), benchmarkOptions);
+
+            historicalChart.render();
+            benchmarkChart.render();
+        });
+    </script>
+</section></element><element id="262027c0-7c4f-4e90-a867-2f4da78a70a9" data-section-id="262027c0-7c4f-4e90-a867-2f4da78a70a9">
+
+<section id="services" class="py-24 bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4 font-heading">
+                Our Smallcase Investment Strategies
+            </h2>
+            <p class="text-lg text-neutral-600 max-w-3xl mx-auto">
+                AI-powered investment portfolios designed for different risk appetites and investment goals
+            </p>
+        </div>
+
+        <!-- Investment Strategies -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <!-- Growth Portfolio -->
+            <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden transition-all hover:shadow-lg">
+                <div class="p-6 border-b border-neutral-200">
+                    <h3 class="text-2xl font-bold text-neutral-900 mb-2">Growth Portfolio</h3>
+                    <p class="text-primary-600 font-semibold mb-4">High Growth</p>
+                    <div class="space-y-2">
+                        <p class="flex justify-between text-neutral-600">
+                            <span>CAGR</span>
+                            <span class="font-bold text-neutral-900">25.8%</span>
+                        </p>
+                        <p class="flex justify-between text-neutral-600">
+                            <span>Volatility</span>
+                            <span class="font-bold text-neutral-900">High</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <a href="#" class="block w-full text-center bg-primary-600 text-white py-3 rounded-lg hover:bg-primary-700 transition">
+                        Invest Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Balanced Portfolio -->
+            <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden transition-all hover:shadow-lg">
+                <div class="p-6 border-b border-neutral-200">
+                    <h3 class="text-2xl font-bold text-neutral-900 mb-2">Balanced Portfolio</h3>
+                    <p class="text-primary-600 font-semibold mb-4">Moderate Growth</p>
+                    <div class="space-y-2">
+                        <p class="flex justify-between text-neutral-600">
+                            <span>CAGR</span>
+                            <span class="font-bold text-neutral-900">18.5%</span>
+                        </p>
+                        <p class="flex justify-between text-neutral-600">
+                            <span>Volatility</span>
+                            <span class="font-bold text-neutral-900">Medium</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <a href="#" class="block w-full text-center bg-primary-600 text-white py-3 rounded-lg hover:bg-primary-700 transition">
+                        Invest Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Conservative Portfolio -->
+            <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden transition-all hover:shadow-lg">
+                <div class="p-6 border-b border-neutral-200">
+                    <h3 class="text-2xl font-bold text-neutral-900 mb-2">Conservative Portfolio</h3>
+                    <p class="text-primary-600 font-semibold mb-4">Stable Growth</p>
+                    <div class="space-y-2">
+                        <p class="flex justify-between text-neutral-600">
+                            <span>CAGR</span>
+                            <span class="font-bold text-neutral-900">12.3%</span>
+                        </p>
+                        <p class="flex justify-between text-neutral-600">
+                            <span>Volatility</span>
+                            <span class="font-bold text-neutral-900">Low</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <a href="#" class="block w-full text-center bg-primary-600 text-white py-3 rounded-lg hover:bg-primary-700 transition">
+                        Invest Now
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div class="p-6 bg-white rounded-xl border border-neutral-200">
+                <div class="text-primary-600 mb-4">
+                    <i class="fas fa-robot text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-neutral-900 mb-2">AI-Driven</h3>
+                <p class="text-neutral-600">Machine learning algorithms optimize portfolio allocation</p>
+            </div>
+
+            <div class="p-6 bg-white rounded-xl border border-neutral-200">
+                <div class="text-primary-600 mb-4">
+                    <i class="fas fa-sync text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-neutral-900 mb-2">Auto Rebalancing</h3>
+                <p class="text-neutral-600">Periodic rebalancing to maintain optimal asset allocation</p>
+            </div>
+
+            <div class="p-6 bg-white rounded-xl border border-neutral-200">
+                <div class="text-primary-600 mb-4">
+                    <i class="fas fa-chart-line text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-neutral-900 mb-2">Performance Tracking</h3>
+                <p class="text-neutral-600">Real-time monitoring and performance analytics</p>
+            </div>
+
+            <div class="p-6 bg-white rounded-xl border border-neutral-200">
+                <div class="text-primary-600 mb-4">
+                    <i class="fas fa-shield-alt text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-neutral-900 mb-2">Risk Management</h3>
+                <p class="text-neutral-600">Advanced risk management and portfolio protection</p>
+            </div>
+        </div>
+
+        <!-- Startup Investment Form -->
+        <div class="text-center mt-16">
+            <h3 class="text-2xl font-bold text-neutral-900 mb-4">Have an Innovative Tech Startup?</h3>
+            <p class="text-lg text-neutral-600 mb-6">We invest in promising technology-driven startups. Pitch us your idea!</p>
+            <script type="text/javascript">
+                function zforms_open_window(url, height, width) {
+                    var leftPos = 0;
+                    var topPos = 0;
+                    if(screen) {
+                        leftPos = (screen.width - width) / 2;
+                        topPos = (screen.height - height) / 2;
+                        window.open(url, null, 'width='+width+',height='+height+',left='+leftPos+',top='+topPos+', toolbar=0, location=0, status=1, scrollbars=1, resizable=1');
+                    }
+                }
+            </script>
+            <a href='https://forms.zohopublic.in/sauravyie1/form/PitchtoYieldCurveCapital/formperma/s27Yp83EpHFIGcVdQY7VY-BEBZD7QJyymjmF1rz7RXY' 
+               class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-semibold"
+               title="Pitch to Yield Curve Capital" 
+               target='_blank' 
+               onclick="zforms_open_window(this.href, 648, 700); return false">
+                Submit Your Pitch
+            </a>
+        </div>
+    </div>
+</section></element><element id="b0fba596-e61b-4ea7-b23f-56ac25fe1db0" data-section-id="b0fba596-e61b-4ea7-b23f-56ac25fe1db0">
+
+<section id="team" class="py-24 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4 font-heading">Leadership Team</h2>
+            <p class="text-lg text-neutral-300 max-w-3xl mx-auto">
+                Serial entrepreneurs with expertise in quantitative trading and technology
+            </p>
+        </div>
+
+        <!-- Team Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <!-- Founder 1 -->
+            <div class="flex flex-col items-center">
+                <img src="https://avatar.iran.liara.run/public" alt="Shantanu Gawande" class="w-48 h-48 rounded-full mb-6 border-4 border-primary-800">
+                <h3 class="text-xl font-bold text-white mb-1">Shantanu Gawande</h3>
+                <p class="text-primary-400 font-medium mb-4">Co-founder & CEO</p>
+                <p class="text-neutral-400 text-center">SEBI Registered Research Analyst with entrepreneurial experience. Former co-founder at HTNP Industries.</p>
+                <div class="flex gap-4 mt-4">
+                    <a href="https://linkedin.com/company/yieldcurvecapital" class="text-neutral-400 hover:text-white transition">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://x.com/Yieldcc" class="text-neutral-400 hover:text-white transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Founder 2 -->
+            <div class="flex flex-col items-center">
+                <img src="https://avatar.iran.liara.run/public" alt="Saurav L. Chaudhari" class="w-48 h-48 rounded-full mb-6 border-4 border-primary-800">
+                <h3 class="text-xl font-bold text-white mb-1">Saurav L. Chaudhari</h3>
+                <p class="text-primary-400 font-medium mb-4">Co-founder & CTO</p>
+                <p class="text-neutral-400 text-center">Quantitative Trading Expert and serial entrepreneur. Former co-founder at HTNP Industries.</p>
+                <div class="flex gap-4 mt-4">
+                    <a href="https://linkedin.com/company/yieldcurvecapital" class="text-neutral-400 hover:text-white transition">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://x.com/Yieldcc" class="text-neutral-400 hover:text-white transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Investment Focus -->
+        <div class="text-center mt-16 max-w-3xl mx-auto">
+            <h3 class="text-2xl font-bold text-white mb-4">We Invest in Innovation</h3>
+            <p class="text-neutral-300 mb-8">YCC actively invests in promising technology-driven startups. If you have an innovative idea, we'd love to hear from you.</p>
+            
+            <!-- Pitch Form Integration -->
+            <script type="text/javascript">
+                function zforms_open_window(url, height, width){
+                    var leftPos = 0;
+                    var topPos = 0;
+                    if(screen){
+                        leftPos = (screen.width - width) / 2;
+                        topPos = (screen.height - height) / 2;
+                        window.open(url, null, 'width='+width+',height='+height+',left='+leftPos+',top='+topPos+', toolbar=0, location=0, status=1, scrollbars=1, resizable=1');
+                    }
+                }
+            </script>
+            <a href='https://forms.zohopublic.in/sauravyie1/form/PitchtoYieldCurveCapital/formperma/s27Yp83EpHFIGcVdQY7VY-BEBZD7QJyymjmF1rz7RXY' 
+               class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-semibold"
+               title="Pitch to Yield Curve Capital" 
+               target='_blank' 
+               onclick="zforms_open_window(this.href, 648, 700); return false">
+                Pitch Your Startup
+            </a>
+        </div>
+
+        <!-- Team Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20">
+            <div class="p-6 rounded-xl bg-neutral-800/50 backdrop-blur-sm border border-neutral-700 text-center">
+                <div class="text-3xl font-bold text-white mb-2">50+</div>
+                <div class="text-neutral-400">Team Members</div>
+            </div>
+            <div class="p-6 rounded-xl bg-neutral-800/50 backdrop-blur-sm border border-neutral-700 text-center">
+                <div class="text-3xl font-bold text-white mb-2">200+</div>
+                <div class="text-neutral-400">Research Papers</div>
+            </div>
+            <div class="p-6 rounded-xl bg-neutral-800/50 backdrop-blur-sm border border-neutral-700 text-center">
+                <div class="text-3xl font-bold text-white mb-2">15+</div>
+                <div class="text-neutral-400">Patents Filed</div>
+            </div>
+            <div class="p-6 rounded-xl bg-neutral-800/50 backdrop-blur-sm border border-neutral-700 text-center">
+                <div class="text-3xl font-bold text-white mb-2">20+</div>
+                <div class="text-neutral-400">Years Experience</div>
+            </div>
+        </div>
+    </div>
+</section></element><element id="06064a4d-8114-469c-b179-a379b288eb2c" data-section-id="06064a4d-8114-469c-b179-a379b288eb2c">
+
+<section id="testimonials" class="py-24 bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4 font-heading">
+                What Our Clients Say
+            </h2>
+            <p class="text-lg text-neutral-600 max-w-3xl mx-auto">
+                Hear from investors who have experienced the power of AI-driven portfolio management
+            </p>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <!-- Testimonial 1 -->
+            <div class="p-8 bg-white rounded-xl border border-neutral-200">
+                <div class="flex items-center mb-6">
+                    <img src="https://avatar.iran.liara.run/public" alt="Rajesh Jain" class="w-16 h-16 rounded-full border-2 border-primary-100">
+                    <div class="ml-4">
+                        <h3 class="text-lg font-bold text-neutral-900">Rajesh Jain</h3>
+                        <p class="text-neutral-600">Angel Investor</p>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-primary-500 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-neutral-700">
+                        "The AI-driven approach has consistently delivered superior returns. The automatic rebalancing feature ensures my portfolio stays optimized without any manual intervention."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="p-8 bg-white rounded-xl border border-neutral-200">
+                <div class="flex items-center mb-6">
+                    <img src="https://avatar.iran.liara.run/public" alt="Sneha Patel" class="w-16 h-16 rounded-full border-2 border-primary-100">
+                    <div class="ml-4">
+                        <h3 class="text-lg font-bold text-neutral-900">Sneha Patel</h3>
+                        <p class="text-neutral-600">Portfolio Manager</p>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-primary-500 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-neutral-700">
+                        "The risk management capabilities are exceptional. I've seen consistent growth while maintaining optimal risk levels across different market conditions."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="p-8 bg-white rounded-xl border border-neutral-200">
+                <div class="flex items-center mb-6">
+                    <img src="https://avatar.iran.liara.run/public" alt="Amit Kumar" class="w-16 h-16 rounded-full border-2 border-primary-100">
+                    <div class="ml-4">
+                        <h3 class="text-lg font-bold text-neutral-900">Amit Kumar</h3>
+                        <p class="text-neutral-600">Tech Entrepreneur</p>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-primary-500 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-neutral-700">
+                        "As a tech professional, I appreciate the sophisticated ML algorithms. The performance has been remarkable, significantly outperforming traditional strategies."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="text-center p-6 bg-white rounded-xl border border-neutral-200">
+                <div class="text-3xl font-bold text-primary-600 mb-2">10,000+</div>
+                <div class="text-neutral-600">Active Investors</div>
+            </div>
+            <div class="text-center p-6 bg-white rounded-xl border border-neutral-200">
+                <div class="text-3xl font-bold text-primary-600 mb-2">98%</div>
+                <div class="text-neutral-600">Client Satisfaction</div>
+            </div>
+            <div class="text-center p-6 bg-white rounded-xl border border-neutral-200">
+                <div class="text-3xl font-bold text-primary-600 mb-2">92%</div>
+                <div class="text-neutral-600">Client Retention</div>
+            </div>
+        </div>
+
+        <!-- Leadership Team -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4 font-heading">Our Leadership</h2>
+            <p class="text-lg text-neutral-600 max-w-3xl mx-auto">
+                Meet the experienced professionals leading our innovative approach to investment management
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <!-- Shantanu -->
+            <div class="p-8 bg-white rounded-xl border border-neutral-200">
+                <div class="flex flex-col items-center">
+                    <img src="https://avatar.iran.liara.run/public" alt="Shantanu" class="w-32 h-32 rounded-full border-2 border-primary-100 mb-4">
+                    <h3 class="text-xl font-bold text-neutral-900">Shantanu</h3>
+                    <p class="text-neutral-600 mb-2">SEBI Registered Research Analyst</p>
+                    <p class="text-neutral-700 text-center">
+                        A serial entrepreneur with extensive experience in financial markets and research analysis. Previously worked at HTNP Industries.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Saurav -->
+            <div class="p-8 bg-white rounded-xl border border-neutral-200">
+                <div class="flex flex-col items-center">
+                    <img src="https://avatar.iran.liara.run/public" alt="Saurav" class="w-32 h-32 rounded-full border-2 border-primary-100 mb-4">
+                    <h3 class="text-xl font-bold text-neutral-900">Saurav</h3>
+                    <p class="text-neutral-600 mb-2">Quantitative Analyst</p>
+                    <p class="text-neutral-700 text-center">
+                        A seasoned quant and serial entrepreneur with expertise in developing sophisticated trading algorithms. Former colleague at HTNP Industries.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Startup Pitch Form -->
+        <div class="text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4 font-heading">Have a Tech-Driven Startup?</h2>
+            <p class="text-lg text-neutral-600 max-w-3xl mx-auto mb-8">
+                We invest in promising technology-driven startups. Share your pitch with us.
+            </p>
+            <div class="inline-block">
+                <script type="text/javascript">
+                    function zforms_open_window(url, height, width){
+                        var leftPos = 0;
+                        var topPos = 0;
+                        if(screen){
+                            leftPos = (screen.width - width) / 2;
+                            topPos = (screen.height - height) / 2;
+                            window.open(url, null, 'width='+width+',height='+height+',left='+leftPos+',top='+topPos+', toolbar=0, location=0, status=1, scrollbars=1, resizable=1');
+                        }
+                    }
+                </script>
+                <a href='https://forms.zohopublic.in/sauravyie1/form/PitchtoYieldCurveCapital/formperma/s27Yp83EpHFIGcVdQY7VY-BEBZD7QJyymjmF1rz7RXY' 
+                   class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+                   title="Pitch to Yield Curve Capital" 
+                   target='_blank' 
+                   onclick="zforms_open_window(this.href, 648, 700); return false">
+                    Submit Your Pitch
+                </a>
+            </div>
+        </div>
+    </div>
+</section></element><element id="766eedf1-fb8d-4787-85bc-e997ebba1d8d" data-section-id="766eedf1-fb8d-4787-85bc-e997ebba1d8d">
+
+<section id="contact" class="py-24 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4 font-heading">
+                Our Team
+            </h2>
+            <p class="text-lg text-neutral-300 max-w-3xl mx-auto">
+                Meet the Minds Behind Yield Curve Capital
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Team Members -->
+            <div class="bg-neutral-800 p-8 rounded-xl border border-neutral-700">
+                <h3 class="text-2xl font-bold text-white mb-4">Shantanu</h3>
+                <p class="text-neutral-300 mb-4">SEBI Registered Research Analyst</p>
+                <p class="text-neutral-400 mb-6">A serial entrepreneur with extensive experience in financial markets and research analysis. Previously collaborated with Saurav at HTNP Industries, bringing valuable insights to portfolio management and investment strategies.</p>
+            </div>
+
+            <div class="bg-neutral-800 p-8 rounded-xl border border-neutral-700">
+                <h3 class="text-2xl font-bold text-white mb-4">Saurav</h3>
+                <p class="text-neutral-300 mb-4">Quantitative Analyst</p>
+                <p class="text-neutral-400 mb-6">An accomplished quant and serial entrepreneur with expertise in developing algorithmic trading strategies. Worked alongside Shantanu at HTNP Industries, specializing in data-driven investment solutions.</p>
+            </div>
+        </div>
+
+        <!-- Startup Pitch Section -->
+        <div class="mt-16 text-center">
+            <h3 class="text-2xl font-bold text-white mb-6">Have an Innovative Tech Startup?</h3>
+            <p class="text-neutral-300 mb-8">We're actively investing in promising technology-driven startups. Share your vision with us.</p>
+            <script type="text/javascript">
+                function zforms_open_window(url, height, width){
+                    var leftPos = 0;
+                    var topPos = 0;
+                    if(screen){
+                        leftPos = (screen.width - width) / 2;
+                        topPos = (screen.height - height) / 2;
+                        window.open(url, null, 'width='+width+',height='+height+',left='+leftPos+',top='+topPos+', toolbar=0, location=0, status=1, scrollbars=1, resizable=1');
+                    }
+                }
+            </script>
+            <a href='https://forms.zohopublic.in/sauravyie1/form/PitchtoYieldCurveCapital/formperma/s27Yp83EpHFIGcVdQY7VY-BEBZD7QJyymjmF1rz7RXY' 
+               class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-semibold"
+               title="Pitch to Yield Curve Capital" 
+               target='_blank' 
+               onclick="zforms_open_window(this.href, 648, 700); return false">
+                Pitch Your Startup
+            </a>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
+            <!-- Office Location -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Office Location</h3>
+                <p class="text-neutral-300 font-medium">Mumbai, Maharashtra</p>
+                <p class="text-neutral-400">
+                    WeWork, Bandra Kurla Complex<br>
+                    Mumbai, Maharashtra 400051
+                </p>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Contact Info</h3>
+                <div class="space-y-3">
+                    <p class="text-neutral-300">Get in touch</p>
+                    <p class="text-neutral-400">
+                        <a href="mailto:contact@yieldcurvecapital.com" class="hover:text-white transition">contact@yieldcurvecapital.com</a>
+                    </p>
+                    <p class="text-neutral-400">
+                        <a href="tel:+919876543210" class="hover:text-white transition">+91 98765 43210</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Connect With Us</h3>
+                <div class="flex space-x-4">
+                    <a href="https://linkedin.com/company/yieldcurvecapital" class="text-neutral-400 hover:text-white transition">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://x.com/Yieldcc" class="text-neutral-400 hover:text-white transition">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section></element><element id="fdedb9df-ad9e-4f95-8b39-36e5aff3c7eb" data-section-id="fdedb9df-ad9e-4f95-8b39-36e5aff3c7eb">
+
+<section id="privacy_policy" class="py-24 bg-neutral-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl sm:text-4xl font-bold text-neutral-900 mb-8 font-heading">Privacy Policy</h1>
+        
+        <div class="space-y-8 text-neutral-700">
+            <div>
+                <h2 class="text-xl font-bold text-neutral-900 mb-4">Introduction</h2>
+                <p>Yield Curve Capital (YCC) is committed to protecting your privacy and ensuring the security of your personal information. This privacy policy explains how we collect, use, and protect your data.</p>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-bold text-neutral-900 mb-4">Information We Collect</h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Personal information (name, email, phone number)</li>
+                    <li>Investment preferences and risk profile</li>
+                    <li>Financial information necessary for portfolio management</li>
+                    <li>Website usage data and analytics</li>
+                    <li>Startup pitch information and business details</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-bold text-neutral-900 mb-4">How We Use Your Information</h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Portfolio management and optimization</li>
+                    <li>Communication about your investments</li>
+                    <li>Service improvements and personalization</li>
+                    <li>Regulatory compliance and reporting</li>
+                    <li>Evaluating startup investment opportunities</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-bold text-neutral-900 mb-4">Data Security</h2>
+                <p>We implement robust security measures to protect your data, including:</p>
+                <ul class="list-disc list-inside space-y-2 mt-2">
+                    <li>End-to-end encryption</li>
+                    <li>Secure data storage</li>
+                    <li>Regular security audits</li>
+                    <li>Access controls and monitoring</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-bold text-neutral-900 mb-4">Third-Party Sharing</h2>
+                <p>We may share your data with:</p>
+                <ul class="list-disc list-inside space-y-2 mt-2">
+                    <li>Regulatory authorities</li>
+                    <li>Service providers essential to our operations</li>
+                    <li>Financial institutions for transaction processing</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-bold text-neutral-900 mb-4">Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul class="list-disc list-inside space-y-2 mt-2">
+                    <li>Access your personal data</li>
+                    <li>Request data correction or deletion</li>
+                    <li>Opt-out of marketing communications</li>
+                    <li>File a complaint with regulatory authorities</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-bold text-neutral-900 mb-4">Startup Pitch Submission</h2>
+                <p>For tech-driven startups interested in investment opportunities with YCC, please submit your pitch through our secure form:</p>
+                <div class="mt-4">
+                    <script type="text/javascript">
+                        function zforms_open_window(url, height, width){
+                            var leftPos = 0;
+                            var topPos = 0;
+                            if(screen){
+                                leftPos = (screen.width - width) / 2;
+                                topPos = (screen.height - height) / 2;
+                                window.open(url, null, 'width='+width+',height='+height+',left='+leftPos+',top='+topPos+', toolbar=0, location=0, status=1, scrollbars=1, resizable=1');
+                            }
+                        }
+                    </script>
+                    <a href='https://forms.zohopublic.in/sauravyie1/form/PitchtoYieldCurveCapital/formperma/s27Yp83EpHFIGcVdQY7VY-BEBZD7QJyymjmF1rz7RXY' 
+                       class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+                       title="Pitch to Yield Curve Capital" 
+                       target='_blank' 
+                       onclick="zforms_open_window(this.href, 648, 700); return false">
+                        Submit Your Pitch
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-neutral-200">
+                <p class="text-sm text-neutral-500">Last updated: January 2024</p>
+            </div>
+        </div>
+    </div>
+</section></element><element id="bf32b202-2fe6-4e37-963a-62972c25efe8" data-section-id="bf32b202-2fe6-4e37-963a-62972c25efe8">
+
+<div id="root">
+    <footer id="footer" class="bg-neutral-900 text-neutral-300">
+        <!-- Main Footer -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <img src="https://contact@yieldcc.com/logo.png" alt="Yield Curve Capital" class="h-8 w-auto">
+                        <span class="ml-2 text-lg font-bold text-white">Yield Curve Capital</span>
+                    </div>
+                    <p class="text-sm text-neutral-400 mb-4">
+                        A SEBI registered portfolio management service provider focused on AI-driven investment strategies and tech startup investments.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Smallcase Offerings</a></li>
+                        <li><a href="#performance" class="hover:text-white transition">Performance</a></li>
+                        <li><a href="#startups" class="hover:text-white transition">Startup Investments</a></li>
+                    </ul>
+                </div>
+
+                <!-- Team & Legal -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Team & Legal</h3>
+                    <div class="mb-4">
+                        <p class="text-sm mb-2">Shantanu - SEBI Registered RA</p>
+                        <p class="text-sm mb-4">Saurav - Quantitative Analyst</p>
+                        <p class="text-xs text-neutral-400">Serial entrepreneurs, former colleagues at HTNP Industries</p>
+                    </div>
+                    <ul class="space-y-2">
+                        <li><a href="#terms" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#privacy" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#risk" class="hover:text-white transition">Risk Disclosure</a></li>
+                    </ul>
+                </div>
+
+                <!-- Pitch Your Startup -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Pitch Your Startup</h3>
+                    <p class="text-sm text-neutral-400 mb-4">
+                        Have an innovative tech-driven startup? We'd love to hear from you.
+                    </p>
+                    <script type="text/javascript">
+                        function zforms_open_window(url, height, width){
+                            var leftPos = 0;
+                            var topPos = 0;
+                            if(screen){
+                                leftPos = (screen.width - width) / 2;
+                                topPos = (screen.height - height) / 2;
+                                window.open(url, null, 'width='+width+',height='+height+',left='+leftPos+',top='+topPos+', toolbar=0, location=0, status=1, scrollbars=1, resizable=1');
+                            }
+                        }
+                    </script>
+                    <a href='https://forms.zohopublic.in/sauravyie1/form/PitchtoYieldCurveCapital/formperma/s27Yp83EpHFIGcVdQY7VY-BEBZD7QJyymjmF1rz7RXY' 
+                       class="inline-block px-4 py-2 bg-neutral-800 text-white rounded hover:bg-neutral-700 transition"
+                       title="Pitch to Yield Curve Capital" 
+                       target='_blank' 
+                       onclick="zforms_open_window(this.href, 648, 700); return false">
+                        Submit Your Pitch
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-neutral-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div class="md:flex md:items-center md:justify-between">
+                    <div class="text-sm text-neutral-400">
+                        <p class="mb-2 md:mb-0">© 2024 Yield Curve Capital. All rights reserved.</p>
+                        <p class="text-xs mt-2">Mutual Fund investments are subject to market risks, read all scheme related documents carefully. Past performance is not indicative of future returns.</p>
+                    </div>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="https://linkedin.com/company/yieldcurvecapital" class="text-neutral-400 hover:text-white transition">
+                            <span class="sr-only">LinkedIn</span>
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://x.com/Yieldcc" class="text-neutral-400 hover:text-white transition">
+                            <span class="sr-only">Twitter</span>
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-4 text-xs text-neutral-500">
+                    <p>Yield Curve Capital (YCC) is a SEBI registered Portfolio Manager. Registration code: PM/INP000012345.</p>
+                    <p class="mt-1">Investment in securities market are subject to market risks, read all the related documents carefully before investing.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
